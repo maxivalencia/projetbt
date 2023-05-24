@@ -1,0 +1,13 @@
+[Unit]
+Description=Projet trading automatique
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/bin/bash "/var/www/html/projet BT/bot_fxcm_chart.py"
+
+[Install]
+WantedBy=multi-user.target

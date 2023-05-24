@@ -1,0 +1,430 @@
+|ERROR|2023-05-17 10:02:36,175|Socket returns unknown error.
+|ERROR|2023-05-17 10:03:36,177|Socket returns unknown error.
+|ERROR|2023-05-17 10:04:17,579|packet queue is empty, aborting
+|ERROR|2023-05-17 10:04:36,180|Socket returns unknown error.
+|ERROR|2023-05-17 10:05:36,184|Socket returns unknown error.
+|ERROR|2023-05-17 10:06:36,192|Socket returns unknown error.
+|ERROR|2023-05-17 10:07:36,199|Socket returns unknown error.
+|ERROR|2023-05-17 10:08:36,203|Socket returns unknown error.
+|ERROR|2023-05-17 10:09:36,214|Socket returns unknown error.
+|ERROR|2023-05-17 10:10:36,226|Socket returns unknown error.
+|ERROR|2023-05-17 10:10:56,451|packet queue is empty, aborting
+|ERROR|2023-05-17 10:11:36,237|Socket returns unknown error.
+|ERROR|2023-05-17 10:12:36,242|Socket returns unknown error.
+|ERROR|2023-05-17 10:13:36,245|Socket returns unknown error.
+|ERROR|2023-05-17 10:14:36,249|Socket returns unknown error.
+|ERROR|2023-05-17 10:15:36,254|Socket returns unknown error.
+|ERROR|2023-05-17 10:16:36,257|Socket returns unknown error.
+|ERROR|2023-05-17 10:16:42,567|packet queue is empty, aborting
+|ERROR|2023-05-17 10:17:36,262|Socket returns unknown error.
+|ERROR|2023-05-17 10:18:36,265|Socket returns unknown error.
+|ERROR|2023-05-17 10:19:36,277|Socket returns unknown error.
+|ERROR|2023-05-17 10:20:36,279|Socket returns unknown error.
+|ERROR|2023-05-17 10:21:36,283|Socket returns unknown error.
+|ERROR|2023-05-17 10:22:36,289|Socket returns unknown error.
+|ERROR|2023-05-17 10:23:36,292|Socket returns unknown error.
+|ERROR|2023-05-17 10:24:36,298|Socket returns unknown error.
+|ERROR|2023-05-17 10:25:36,302|Socket returns unknown error.
+|ERROR|2023-05-17 10:26:36,308|Socket returns unknown error.
+|ERROR|2023-05-17 10:27:36,312|Socket returns unknown error.
+|ERROR|2023-05-17 10:28:36,316|Socket returns unknown error.
+|ERROR|2023-05-17 10:29:36,320|Socket returns unknown error.
+|ERROR|2023-05-17 10:30:36,325|Socket returns unknown error.
+|ERROR|2023-05-17 10:31:36,329|Socket returns unknown error.
+|ERROR|2023-05-17 10:32:36,334|Socket returns unknown error.
+|ERROR|2023-05-17 10:33:36,340|Socket returns unknown error.
+|ERROR|2023-05-17 10:34:36,344|Socket returns unknown error.
+|ERROR|2023-05-17 10:35:29,260|packet queue is empty, aborting
+|ERROR|2023-05-17 10:35:36,350|Socket returns unknown error.
+|ERROR|2023-05-17 10:36:36,358|Socket returns unknown error.
+|ERROR|2023-05-17 10:37:36,361|Socket returns unknown error.
+|ERROR|2023-05-17 10:38:36,368|Socket returns unknown error.
+|ERROR|2023-05-17 10:39:36,371|Socket returns unknown error.
+|ERROR|2023-05-19 10:34:57,270|Socket returns unknown error.
+|ERROR|2023-05-19 10:36:16,829|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:36:16,829|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:36:16,829|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:36:16,829|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:36:16,829|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:36:16,829|Connection status: established
+|ERROR|2023-05-19 10:36:16,829|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:36:16,829|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:36:18,801|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:36:18,801|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:36:18,801|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:36:18,801|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:36:18,801|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:36:18,801|Connection status: established
+|ERROR|2023-05-19 10:36:18,801|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:36:18,801|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:36:20,805|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:36:20,805|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:36:20,805|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:36:20,805|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:36:20,805|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:36:20,805|Connection status: established
+|ERROR|2023-05-19 10:36:20,805|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:36:20,805|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:36:22,664|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:36:22,664|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:36:22,664|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:36:22,664|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:36:22,664|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:36:22,664|Connection status: established
+|ERROR|2023-05-19 10:36:22,664|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:36:22,664|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:36:24,477|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:36:24,477|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:36:24,477|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:36:24,477|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:36:24,477|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:36:24,477|Connection status: established
+|ERROR|2023-05-19 10:36:24,477|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:36:24,492|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:36:26,628|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:36:26,628|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:36:26,628|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:36:26,628|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:36:26,628|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:36:26,628|Connection status: established
+|ERROR|2023-05-19 10:36:26,628|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:36:26,628|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:37:39,388|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:37:39,389|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:37:39,389|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:37:39,389|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:37:39,389|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:37:39,389|Connection status: established
+|ERROR|2023-05-19 10:37:39,389|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:37:39,389|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:37:41,238|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:37:41,238|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:37:41,238|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:37:41,238|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:37:41,238|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:37:41,238|Connection status: established
+|ERROR|2023-05-19 10:37:41,238|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:37:41,238|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:37:46,064|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:37:46,064|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:37:46,065|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:37:46,065|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:37:46,065|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:37:46,065|Connection status: established
+|ERROR|2023-05-19 10:37:46,065|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:37:46,065|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:37:48,088|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:37:48,088|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:37:48,088|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:37:48,088|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:37:48,088|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:37:48,088|Connection status: established
+|ERROR|2023-05-19 10:37:48,088|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:37:48,088|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:37:52,158|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:37:52,158|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:37:52,158|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:37:52,158|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:37:52,158|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:37:52,158|Connection status: established
+|ERROR|2023-05-19 10:37:52,158|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:37:52,158|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:37:54,079|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:37:54,079|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:37:54,079|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:37:54,079|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:37:54,079|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:37:54,079|Connection status: established
+|ERROR|2023-05-19 10:37:54,079|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:37:54,079|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:39:10,065|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:39:10,065|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:39:10,065|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:39:10,065|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:39:10,065|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:39:10,065|Connection status: established
+|ERROR|2023-05-19 10:39:10,065|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:39:10,065|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:39:17,881|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:39:17,881|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:39:17,881|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:39:17,881|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:39:17,881|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:39:17,881|Connection status: established
+|ERROR|2023-05-19 10:39:17,881|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:39:17,881|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:39:25,495|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:39:25,495|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:39:25,495|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:39:25,495|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:39:25,496|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:39:25,496|Connection status: established
+|ERROR|2023-05-19 10:39:25,496|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:39:25,496|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:39:34,073|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:39:34,073|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:39:34,073|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:39:34,073|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:39:34,073|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:39:34,073|Connection status: established
+|ERROR|2023-05-19 10:39:34,073|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:39:34,073|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:39:35,928|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:39:35,928|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:39:35,928|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:39:35,928|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:39:35,928|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:39:35,928|Connection status: established
+|ERROR|2023-05-19 10:39:35,928|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:39:35,928|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:41:03,723|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:41:03,723|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:41:03,723|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:41:03,723|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:41:03,723|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:41:03,723|Connection status: established
+|ERROR|2023-05-19 10:41:03,723|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:41:03,723|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:41:06,098|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:41:06,098|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:41:06,098|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:41:06,098|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:41:06,098|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:41:06,098|Connection status: established
+|ERROR|2023-05-19 10:41:06,098|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:41:06,098|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:41:08,163|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:41:08,163|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:41:08,163|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:41:08,163|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:41:08,163|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:41:08,163|Connection status: established
+|ERROR|2023-05-19 10:41:08,163|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:41:08,163|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:41:10,319|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:41:10,319|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:41:10,319|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:41:10,319|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:41:10,319|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:41:10,319|Connection status: established
+|ERROR|2023-05-19 10:41:10,319|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:41:10,319|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:41:12,085|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:41:12,085|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:41:12,085|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:41:12,085|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:41:12,085|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:41:12,085|Connection status: established
+|ERROR|2023-05-19 10:41:12,085|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:41:12,100|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:41:14,172|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:41:14,172|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:41:14,172|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:41:14,172|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:41:14,172|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:41:14,172|Connection status: established
+|ERROR|2023-05-19 10:41:14,172|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:41:14,172|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:42:25,842|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:42:25,857|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:42:25,857|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:42:25,857|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:42:25,857|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:42:25,857|Connection status: established
+|ERROR|2023-05-19 10:42:25,857|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:42:25,857|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:42:28,031|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:42:28,031|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:42:28,031|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:42:28,031|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:42:28,031|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:42:28,031|Connection status: established
+|ERROR|2023-05-19 10:42:28,031|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:42:28,031|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:42:30,129|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:42:30,129|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:42:30,129|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:42:30,129|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:42:30,129|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:42:30,129|Connection status: established
+|ERROR|2023-05-19 10:42:30,129|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:42:30,129|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:42:32,280|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:42:32,280|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:42:32,280|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:42:32,280|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:42:32,280|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:42:32,280|Connection status: established
+|ERROR|2023-05-19 10:42:32,280|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:42:32,280|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:42:34,305|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:42:34,305|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:42:34,305|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:42:34,305|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:42:34,305|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:42:34,305|Connection status: established
+|ERROR|2023-05-19 10:42:34,305|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:42:34,305|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:42:38,991|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:42:38,991|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:42:38,991|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:42:38,991|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:42:38,991|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:42:38,991|Connection status: established
+|ERROR|2023-05-19 10:42:38,991|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:42:38,991|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:43:52,633|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:43:52,633|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:43:52,633|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:43:52,633|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:43:52,633|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:43:52,633|Connection status: established
+|ERROR|2023-05-19 10:43:52,633|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:43:52,633|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:43:54,430|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:43:54,430|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:43:54,430|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:43:54,430|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:43:54,430|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:43:54,430|Connection status: established
+|ERROR|2023-05-19 10:43:54,430|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:43:54,430|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:43:56,591|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:43:56,591|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:43:56,591|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:43:56,591|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:43:56,591|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:43:56,591|Connection status: established
+|ERROR|2023-05-19 10:43:56,591|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:43:56,591|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:43:58,738|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:43:58,738|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:43:58,738|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:43:58,738|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:43:58,738|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:43:58,754|Connection status: established
+|ERROR|2023-05-19 10:43:58,754|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:43:58,754|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:44:00,561|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:44:00,561|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:44:00,561|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:44:00,561|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:44:00,561|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:44:00,561|Connection status: established
+|ERROR|2023-05-19 10:44:00,562|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:44:00,562|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:45:13,349|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:45:13,349|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:45:13,349|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:45:13,349|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:45:13,349|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:45:13,349|Connection status: established
+|ERROR|2023-05-19 10:45:13,349|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:45:13,349|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:45:15,495|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:45:15,495|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:45:15,495|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:45:15,496|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:45:15,496|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:45:15,496|Connection status: established
+|ERROR|2023-05-19 10:45:15,496|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:45:15,496|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:45:17,426|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:45:17,426|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:45:17,426|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:45:17,426|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:45:17,426|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:45:17,426|Connection status: established
+|ERROR|2023-05-19 10:45:17,426|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:45:17,426|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:45:19,725|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:45:19,725|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:45:19,725|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:45:19,725|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:45:19,725|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:45:19,725|Connection status: established
+|ERROR|2023-05-19 10:45:19,726|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:45:19,726|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:45:21,710|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:45:21,710|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:45:21,710|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:45:21,710|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:45:21,710|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:45:21,711|Connection status: established
+|ERROR|2023-05-19 10:45:21,711|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:45:21,711|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:45:23,788|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:45:23,789|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:45:23,789|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:45:23,789|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:45:23,789|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:45:23,789|Connection status: established
+|ERROR|2023-05-19 10:45:23,789|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:45:23,789|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:46:38,795|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:46:38,795|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:46:38,795|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:46:38,795|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:46:38,795|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:46:38,795|Connection status: established
+|ERROR|2023-05-19 10:46:38,795|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:46:38,795|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:46:41,696|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:46:41,696|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:46:41,696|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:46:41,697|Params: {'trade_id': 74973818, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:46:41,697|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:46:41,697|Connection status: established
+|ERROR|2023-05-19 10:46:41,697|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:46:41,697|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:46:48,485|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:46:48,485|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:46:48,485|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:46:48,485|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:46:48,485|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:46:48,485|Connection status: established
+|ERROR|2023-05-19 10:46:48,485|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:46:48,485|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:46:52,350|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:46:52,350|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:46:52,350|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:46:52,350|Params: {'trade_id': 74973648, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:46:52,350|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:46:52,350|Connection status: established
+|ERROR|2023-05-19 10:46:52,350|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:46:52,350|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:47:03,693|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:47:03,693|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:47:03,693|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:47:03,693|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:47:03,693|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:47:03,693|Connection status: established
+|ERROR|2023-05-19 10:47:03,694|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:47:03,694|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:47:09,696|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-05-19 10:47:09,696|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-05-19 10:47:09,696|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-05-19 10:47:09,697|Params: {'trade_id': 74973927, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 0.0, 'trailing_step': 0}
+|ERROR|2023-05-19 10:47:09,697|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:47:09,697|Connection status: established
+|ERROR|2023-05-19 10:47:09,697|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:47:09,697|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-05-19 10:47:19,019|Server reports an error: {'executed': False, 'error': 'Invalid from/to parameneters.'}.
+|ERROR|2023-05-19 10:47:19,019|URL: https://api-demo.fxcm.com:443/candles/8/m1?num=10&from=1683007860&to=1684493235
+|ERROR|2023-05-19 10:47:19,019|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded'}
+|ERROR|2023-05-19 10:47:19,019|Params: {'num': 10, 'from': 1683007860, 'to': 1684493235}
+|ERROR|2023-05-19 10:47:19,020|Bearer token: Bearer YD0BHh0V2ft66KecADbBb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-05-19 10:47:19,020|Connection status: established
+|ERROR|2023-05-19 10:47:19,020|Socket session id: YD0BHh0V2ft66KecADbB
+|ERROR|2023-05-19 10:47:19,020|Can not parse server answer to json object: {"response":{"executed":false,"error":"Invalid from/to parameneters."},"instrument_id":"8","period_id":"m1","candles":[]}.
+|ERROR|2023-05-19 10:47:33,079|packet queue is empty, aborting
+|ERROR|2023-05-19 10:56:56,897|packet queue is empty, aborting
+|ERROR|2023-05-19 11:26:56,132|packet queue is empty, aborting
+|ERROR|2023-05-19 11:28:37,497|Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+|ERROR|2023-05-19 11:35:00,368|packet queue is empty, aborting
+|ERROR|2023-05-19 12:39:13,894|packet queue is empty, aborting
+|ERROR|2023-05-19 14:14:03,181|packet queue is empty, aborting
+|ERROR|2023-05-19 14:41:28,618|packet queue is empty, aborting
+|ERROR|2023-05-19 14:45:54,039|packet queue is empty, aborting
+|ERROR|2023-05-19 14:50:10,122|packet queue is empty, aborting
+|ERROR|2023-05-19 15:00:04,939|packet queue is empty, aborting

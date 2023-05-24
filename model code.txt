@@ -1,0 +1,212 @@
+import fxcmpy
+
+# Connexion à FXCM
+con = fxcmpy.fxcmpy(access_token='votre_token', server='serveur_fxcm')
+
+# Affichage des prix en temps réel
+prices = con.get_prices('EUR/USD')
+print(prices)
+
+# Fermeture de la connexion
+con.close()
+
+
+import fxcmpy
+
+# Connexion à FXCM
+con = fxcmpy.fxcmpy(access_token='votre_token', server='serveur_fxcm')
+
+# Vérifier le solde disponible dans votre compte
+balance = con.get_accounts()['usableMargin']
+print('Solde disponible:', balance)
+
+# Placer un ordre pour acheter 10,000 unités de la paire EUR/USD
+order = con.create_market_buy_order('EUR/USD', 10000)
+
+# Vérifier l'état de l'ordre
+if order.get_is_open() == True:
+    print('Ordre ouvert avec succès.')
+else:
+    print('Échec de l\'ouverture de l\'ordre.')
+
+# Fermer la connexion
+con.close()
+
+
+import fxcmpy
+
+# Connexion à FXCM
+con = fxcmpy.fxcmpy(access_token='votre_token', server='serveur_fxcm')
+
+# Vérifier le solde disponible dans votre compte
+balance = con.get_accounts()['usableMargin']
+print('Solde disponible:', balance)
+
+# Placer un ordre pour acheter 10,000 unités de la paire EUR/USD avec un stop-loss à 1.20 et un take-profit à 1.25
+order = con.create_market_buy_order('EUR/USD', 10000, stop_loss=1.20, take_profit=1.25)
+
+# Vérifier l'état de l'ordre
+if order.get_is_open() == True:
+    print('Ordre ouvert avec succès.')
+else:
+    print('Échec de l\'ouverture de l\'ordre.')
+
+# Fermer la connexion
+con.close()
+
+
+import fxcmpy
+
+# Connexion à FXCM
+con = fxcmpy.fxcmpy(access_token='votre_token', server='serveur_fxcm')
+
+# Vérifier le solde disponible dans votre compte
+balance = con.get_accounts()['usableMargin']
+print('Solde disponible:', balance)
+
+# Placer un ordre pour acheter 10,000 unités de la paire EUR/USD avec un stop-loss à 20 pips et un take-profit à 50 pips
+order = con.create_market_buy_order('EUR/USD', 10000, is_in_pips=True, stop_loss=20, take_profit=50)
+
+# Vérifier l'état de l'ordre
+if order.get_is_open() == True:
+    print('Ordre ouvert avec succès.')
+else:
+    print('Échec de l\'ouverture de l\'ordre.')
+
+# Fermer la connexion
+con.close()
+
+
+import fxcmpy
+import pandas as pd
+import numpy as np
+
+# Fonction pour calculer la moyenne mobile simple (SMA)
+def SMA(data, period):
+    return data.rolling(window=period).mean()
+
+# Paramètres du trading
+symbol = 'EUR/USD'
+period = 20 # Période de la moyenne mobile
+quantity = 10000 # Quantité d'unités à échanger
+stop_loss = 30 # Niveau de stop-loss en pips
+take_profit = 50 # Niveau de take-profit en pips
+
+# Connexion à FXCM
+con = fxcmpy.fxcmpy(access_token='votre_token', server='serveur_fxcm')
+
+# Fonction de trading
+def trade():
+    # Récupérer les données historiques de prix pour le symbole
+    data = con.get_candles(symbol, period='m1', number=period+1)
+
+    # Calculer la moyenne mobile simple (SMA)
+    data['SMA'] = SMA(data['bidclose'], period)
+
+    # Vérifier si le dernier prix est supérieur à la moyenne mobile
+    last_price = data['bidclose'].iloc[-1]
+    last_sma = data['SMA'].iloc[-1]
+    if last_price > last_sma:
+        # Placer un ordre d'achat
+        order = con.create_market_buy_order(symbol, quantity, is_in_pips=True, stop_loss=stop_loss, take_profit=take_profit)
+        print('Ordre d\'achat placé avec succès. Prix:', last_price)
+    else:
+        # Placer un ordre de vente
+        order = con.create_market_sell_order(symbol, quantity, is_in_pips=True, stop_loss=stop_loss, take_profit=take_profit)
+        print('Ordre de vente placé avec succès. Prix:', last_price)
+
+# Boucle principale de trading
+while True:
+    # Attendre 1 minute
+    con.wait_for_ticks()
+
+    # Vérifier si une nouvelle bougie est disponible
+    if con.is_connected() and con.is_subscribed(symbol):
+        candles = con.get_candles(symbol, period='m1', number=1)
+        if len(candles) > 0:
+            # Effectuer un trade si une nouvelle bougie est disponible
+            trade()
+
+
+Pour mettre en place un take-profit et un stop-loss en utilisant la bibliothèque fxcmpy en Python, vous pouvez utiliser les méthodes "create_entry_order" ou "change_trade_stop_limit" pour configurer un ordre d'entrée et spécifier le stop-loss et le take-profit.
+
+Voici un exemple de code pour créer un ordre d'entrée avec un stop-loss et un take-profit:
+
+python
+Copy code
+import fxcmpy
+
+# Connexion à FXCM API
+con = fxcmpy.fxcmpy(access_token='YOUR_TOKEN_HERE', server='YOUR_SERVER_NAME_HERE')
+
+# Spécifier les paramètres de l'ordre
+symbol = 'EUR/USD'
+amount = 10
+stop_loss = 1.2
+take_profit = 1.3
+
+# Créer un ordre d'entrée avec stop-loss et take-profit
+order = con.create_entry_order(symbol=symbol, amount=amount, is_buy=True,
+                               stop_loss=stop_loss, take_profit=take_profit)
+
+# Fermer la connexion
+con.close()
+Dans cet exemple, nous avons créé un ordre d'achat pour 10 lots de l'EUR/USD avec un stop-loss à 1.2 et un take-profit à 1.3. L'ordre est créé en utilisant la méthode "create_entry_order" de fxcmpy, qui prend en compte plusieurs paramètres, y compris le symbole de la paire de devises, la quantité de lots, la direction de l'ordre (achat ou vente), le stop-loss et le take-profit.
+
+Il est également possible de modifier un ordre existant pour ajouter ou modifier le stop-loss et/ou le take-profit en utilisant la méthode "change_trade_stop_limit". Voici un exemple de code pour modifier un ordre existant :
+
+python
+Copy code
+import fxcmpy
+
+# Connexion à FXCM API
+con = fxcmpy.fxcmpy(access_token='YOUR_TOKEN_HERE', server='YOUR_SERVER_NAME_HERE')
+
+# Spécifier les paramètres de l'ordre existant
+order_id = '123456789'
+stop_loss = 1.2
+take_profit = 1.3
+
+# Modifier l'ordre existant avec un stop-loss et un take-profit
+con.change_trade_stop_limit(trade_id=order_id, is_stop=True, rate=stop_loss)
+con.change_trade_stop_limit(trade_id=order_id, is_stop=False, rate=take_profit)
+
+# Fermer la connexion
+con.close()
+Dans cet exemple, nous avons modifié l'ordre avec l'identifiant "123456789" pour ajouter un stop-loss à 1.2 et un take-profit à 1.3 en utilisant la méthode "change_trade_stop_limit" de fxcmpy. La méthode est appelée deux fois pour ajouter le stop-loss puis le take-profit, avec le paramètre "is_stop" qui spécifie s'il s'agit d'un stop-loss ou d'un take-profit et le paramètre "rate" qui spécifie le taux de stop-loss ou de take-profit.
+
+import pandas as pd
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+# Chargement des données historiques de prix
+df = pd.read_csv("historical_prices.csv")
+
+# Création d'une variable cible qui indique si le prix augmentera ou diminuera dans 10 jours
+df["target"] = df["price"].shift(-10) > df["price"]
+
+# Sélection des variables prédictives
+features = ["price", "volume", "rsi"]
+
+# Séparation des données en ensembles d'entraînement et de test
+X_train, X_test, y_train, y_test = train_test_split(df[features], df["target"], test_size=0.2)
+
+# Standardisation des données
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# Entraînement du modèle SVM
+model = SVC(kernel="rbf", C=1, gamma="scale")
+model.fit(X_train, y_train)
+
+# Prédictions sur l'ensemble de test
+y_pred = model.predict(X_test)
+
+# Évaluation des performances du modèle
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy: {:.2f}%".format(accuracy * 100))
+
+
