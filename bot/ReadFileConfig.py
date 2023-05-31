@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/python3
+
 import os.path
 import os
 def GetTradeStatus(status_file):

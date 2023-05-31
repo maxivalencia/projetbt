@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/python3
+
 import fxcmpy
 def GetOpenPositionsSummary():
     global con, summary
@@ -205,13 +206,13 @@ def CloseAll():
 
 def ChangeStopLoss(valeur, trId):
     global con, tradeId
-    con.change_trade_stop_limit(tdId, is_in_pips = False, is_stop = False, rate = valeur)
+    con.change_trade_stop_limit(trId, is_in_pips = False, is_stop = False, rate = valeur)
     print(">>> Modification stoploss pour la valeur :", valeur)
     return True
 
 def ChangeTakeProfit(valeur, trId):
     global con, tradeId
-    con.change_order(order_id=tdId, amount=valeur)
+    con.change_order(order_id=trId, amount=valeur)
     print(">>> Modification takeprofit pour la valeur :", valeur)
     return True
 
