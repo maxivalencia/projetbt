@@ -201,9 +201,10 @@ class DataPrediction:
                         SetStopLoss(sl)
                         SetTakeProfit(tp)                
                         operation = 1 """
-                    SetStopLoss(sl)
-                    SetTakeProfit(tp)              
+                    #SetStopLoss(sl)
+                    #SetTakeProfit(tp)              
                     operation = 1  
+                    return True, operation, tp, sl
             # sell signal
             if(df.iloc[-1,:].target_ask > 0):
                 nb_signal_1 = 0
@@ -234,9 +235,10 @@ class DataPrediction:
                         SetStopLoss(sl)
                         SetTakeProfit(tp)  
                         operation = -1 """
-                    SetStopLoss(sl)
-                    SetTakeProfit(tp)                
+                    #SetStopLoss(sl)
+                    #SetTakeProfit(tp)                
                     operation = -1
+                    return True, operation, tp, sl
             print(">>> Fin de la prédiction")
         except Exception as e:
             print(">>> Erreur de la prédiction, source d'erreur :", e)

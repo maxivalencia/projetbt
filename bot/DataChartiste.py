@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import fxcmpy
 class DataChartiste:
     def __init__(self, pair, data, con, timeframe5m, timeframe15m):
         self.data = data
@@ -9,12 +10,7 @@ class DataChartiste:
         self.pair = pair
 
     def EtudeChartiste(self):
-        global data, data5m, data15m, con
-        global sl_test
-        global tp_test
-        global operation
-        global tendance_ascendant
-        global tendance_descendant
+        global data5m, data15m
         tendance_ascendant = False
         tendance_descendant = False
         tendance_ascendant_5m = False
@@ -71,9 +67,9 @@ class DataChartiste:
             data15m = self.con.get_candles(self.pair, period=self.timeframe15m, number=10000)
             for nb in range(nb_bougie):
                 if(support_bute[numero_case] <= 0):
-                    support_bute[numero_case] = data["askhigh"].iloc[(nb - 1) * (-1)]
-                if(support_bute[numero_case] > data["askhigh"].iloc[(nb - 1) * (-1)]):
-                    support_bute[numero_case] = data["askhigh"].iloc[(nb - 1) * (-1)]
+                    support_bute[numero_case] = self.data["askhigh"].iloc[(nb - 1) * (-1)]
+                if(support_bute[numero_case] > self.data["askhigh"].iloc[(nb - 1) * (-1)]):
+                    support_bute[numero_case] = self.data["askhigh"].iloc[(nb - 1) * (-1)]
                     espacement = 0
                 else:
                     espacement += 1
@@ -116,9 +112,9 @@ class DataChartiste:
                     break
             for nb in range(nb_bougie):
                 if(resistance_bute[numero_case] >= 0):
-                    resistance_bute[numero_case] = data["asklow"].iloc[(nb - 1) * (-1)]
-                if(resistance_bute[numero_case] < data["asklow"].iloc[(nb - 1) * (-1)]):
-                    resistance_bute[numero_case] = data["asklow"].iloc[(nb - 1) * (-1)]
+                    resistance_bute[numero_case] = self.data["asklow"].iloc[(nb - 1) * (-1)]
+                if(resistance_bute[numero_case] < self.data["asklow"].iloc[(nb - 1) * (-1)]):
+                    resistance_bute[numero_case] = self.data["asklow"].iloc[(nb - 1) * (-1)]
                     espacement = 0
                 else:
                     espacement += 1
@@ -246,28 +242,18 @@ class DataChartiste:
                 epaule_tete_epaule = True
 
             # avalement de retournement haussier et baissier
-            if(data["askclose"].iloc[-3] >= data["askclose"].iloc[-2] and data["askopen"].iloc[-3] <= data["askopen"].iloc[-2] and data["askopen"].iloc[-2] > data["askclose"].iloc[-2] and (abs(data["askopen"].iloc[-3] - data["askclose"].iloc[-3]) < abs(data["askopen"].iloc[-2] - data["askclose"].iloc[-2]))):
+            if(self.data["askclose"].iloc[-3] >= self.data["askclose"].iloc[-2] and self.data["askopen"].iloc[-3] <= self.data["askopen"].iloc[-2] and self.data["askopen"].iloc[-2] > self.data["askclose"].iloc[-2] and (abs(self.data["askopen"].iloc[-3] - self.data["askclose"].iloc[-3]) < abs(self.data["askopen"].iloc[-2] - self.data["askclose"].iloc[-2]))):
                 avalement_baissier = True
-            if(data["askclose"].iloc[-3] <= data["askclose"].iloc[-2] and data["askopen"].iloc[-3] >= data["askopen"].iloc[-2] and data["askopen"].iloc[-2] < data["askclose"].iloc[-2] and (abs(data["askopen"].iloc[-3] - data["askclose"].iloc[-3]) < abs(data["askopen"].iloc[-2] - data["askclose"].iloc[-2]))):
+            if(self.data["askclose"].iloc[-3] <= self.data["askclose"].iloc[-2] and self.data["askopen"].iloc[-3] >= self.data["askopen"].iloc[-2] and self.data["askopen"].iloc[-2] < self.data["askclose"].iloc[-2] and (abs(self.data["askopen"].iloc[-3] - self.data["askclose"].iloc[-3]) < abs(self.data["askopen"].iloc[-2] - self.data["askclose"].iloc[-2]))):
                 avalement_haussier = True
             
             # marteau de retournement haussier et baissier
-            if(abs(data["askclose"].iloc[-2] - data["askopen"].iloc[-2]) < ((data["askhigh"].iloc[-2] - data["asklow"].iloc[-2])/4) and (abs(data["askhigh"].iloc[-2] - data["askclose"].iloc[-2]) > abs((data["askclose"].iloc[-2] - data["asklow"].iloc[-2]) * 3))):
+            if(abs(self.data["askclose"].iloc[-2] - self.data["askopen"].iloc[-2]) < ((self.data["askhigh"].iloc[-2] - self.data["asklow"].iloc[-2])/4) and (abs(self.data["askhigh"].iloc[-2] - self.data["askclose"].iloc[-2]) > abs((self.data["askclose"].iloc[-2] - self.data["asklow"].iloc[-2]) * 3))):
                 marteau_retournement_baissier = True
-            if(abs(data["askclose"].iloc[-2] - data["askopen"].iloc[-2]) < ((data["askhigh"].iloc[-2] - data["asklow"].iloc[-2])/4) and (abs(data["askclose"].iloc[-2] - data["asklow"].iloc[-2]) > abs((data["askhigh"].iloc[-2] - data["askclose"].iloc[-2]) * 3))):
+            if(abs(self.data["askclose"].iloc[-2] - self.data["askopen"].iloc[-2]) < ((self.data["askhigh"].iloc[-2] - self.data["asklow"].iloc[-2])/4) and (abs(self.data["askclose"].iloc[-2] - self.data["asklow"].iloc[-2]) > abs((self.data["askhigh"].iloc[-2] - self.data["askclose"].iloc[-2]) * 3))):
                 marteau_retournement_haussier = True
 
-            # buy position
-            """ if(avalement_haussier == True or marteau_retournement_haussier == True or triple_bottom == True or double_bottom == True or epaule_tete_epaule_inverse == True):
-                operation = -1
-                SetStopLoss(-2)
-                SetTakeProfit(10) """
-            # sell position
-            """ if(avalement_baissier == True or marteau_retournement_baissier == True or triple_top == True or double_top == True or epaule_tete_epaule == True):
-                operation = 1
-                SetStopLoss(-2)
-                SetTakeProfit(10) """
-            return True
+            return True, tendance_ascendant, tendance_descendant, tendance_ascendant_5m, tendance_descendant_5m
         except Exception as e:
             print(">>> Erreur durant l'étude des figures chartiste', source d'erreur :", e)
             return False

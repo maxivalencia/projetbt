@@ -10,6 +10,7 @@ import os
 import time as tm
 from datetime import timedelta, date, time
 from datetime import datetime
+import fxcmapi
 
 ### ------ Fonction de récupération des données ------ ###
 class GetData:
