@@ -144,44 +144,6 @@ def SetStopLoss(sl):
         return False
     return True
 
-def GetNombrePosition():
-    global con
-    try:
-        orders = con.get_open_positions().T
-        return orders.shape[1]
-    except Exception as e:
-        print(">>> Erreur de la récupératoin du nombre de position, source d'erreur :", e)
-        return 0
-    
-
-def GetTicket():
-    global con
-    try:
-        ticket = con.get_subscribed_symbols()
-        print(ticket)
-    except Exception as e:
-        print(">>> Erreur de la récupératoin du symbole en cours, source d'erreur :", e)
-        return False
-    return ticket
-
-def SetTicket(pair):
-    global con
-    try:
-        con.subscribe_market_data(pair)
-    except Exception as e:
-        print(">>> Erreur de l'inscription du nouveau symbole, source d'erreur :", e)
-        return False
-    return True
-
-def UnSetTicket(pair):
-    global con
-    try:
-        con.unsubscribe_market_data(pair)
-    except Exception as e:
-        print(">>> Erreur de la desinscription du symbole en cours, source d'erreur :", e)
-        return False
-    return True
-    
 # fonction ahafahana manao ny calcul ny nombre de lot tokony azo atao trade
 def SetNombreLot():
     global lot_test
@@ -192,41 +154,6 @@ def SetNombreLot():
         return False
     return True
 
-def Connection():
-    global con
-    global server, config_file_name
-    try:
-        con = fxcmpy.fxcmpy(config_file=config_file_name, server = server)
-        print(">>> Connection effectuée avec succès")
-        connected = True
-    except Exception as e:
-        print(">>> Erreur de la connection, source d'erreur :", e)
-        return False
-    return True
-
-def Deconnection():
-    global con
-    try:
-        con.close()
-        print(">>> Deconnection effectuée avec succès")
-        connected = False
-    except Exception as e:
-        print(">>> Erreur de la déconnection, source d'erreur :", e)
-        return False
-    return True
-
-# tsy tena obligatoire fa ahafahana maka ny information mikasika ny ticket na pair iray
-#def GetInfoTicket():
-
-def GetOpenPosition():
-    global con
-    try:
-        positions = con.get_open_positions().T
-        print(positions)
-    except Exception as e:
-        print(">>> Erreur de la récupératoin des positions ouverts, source d'erreur :", e)
-        return False
-    return positions
 
 """
 def GetInfoTrade():
@@ -235,106 +162,6 @@ def GetInfoTrade():
     info = con.get_accounts().T
     print(info)
 """
-
-def GetInfoPosition(tradeId):
-    global con
-    try:
-        position = con.get_open_position(tradeId)
-        print(position)
-    except Exception as e:
-        print(">>> Erreur de la récupératoin des informations du trade, source d'erreur :", e)
-        return False
-    return position
-
-def ClosePosition(tradeId, valeur):
-    global con
-    try:
-        con.close_trade(trade_id = tradeId, amount = valeur)
-        print(">>> Fermeture de la position", tradeId, " pour la valeur :", valeur)
-    except Exception as e:
-        print(">>> Erreur de la fermeture du trades, source d'erreur :", e)
-        return False
-    return True
-
-def CloseAllForSymbol(pair):
-    global con
-    try:
-        con.close_all_for_symbol(pair)
-        print(">>> Fermeture de toute les positions pour le symbol:", pair)
-    except Exception as e:
-        print(">>> Erreur de la fermeture de tous les symboles, source d'erreur :", e)
-        return False
-    return True
-    
-def CloseAll():
-    global con
-    try:
-        con.close_all()
-        print(">>> Fermeture de toute les positions ouverte")
-    except Exception as e:
-        print(">>> Erreur de la fermeture de toute les positions, source d'erreur :", e)
-        return False
-    return True
-
-def ChangeStopLoss(valeur, tdId):
-    global con, tradeId
-    try:
-        con.change_trade_stop_limit(tdId, is_in_pips = False, is_stop = False, rate = valeur)
-        print(">>> Modification stoploss pour la valeur :", valeur)
-    except Exception as e:
-        print(">>> Erreur du changement de stop loss, source d'erreur :", e)
-        return False
-    return True
-
-def ChangeTakeProfit(valeur, tdId):
-    global con, tradeId
-    try:
-        con.change_order(order_id=tdId, amount=valeur)
-        print(">>> Modification takeprofit pour la valeur :", valeur)
-    except Exception as e:
-        print(">>> Erreur du changement du take profit, source d'erreur :", e)
-        return False
-    return True
-
-def GetOpenTradeIds():
-    global con, tradeId
-    try:
-        tradeId = con.get_open_trade_ids()
-        print(">>> Liste des Identifications Ouverte :", tradeId)
-    except Exception as e:
-        print(">>> Erreur de la récupératoin des identifications des trades ouvert, source d'erreur :", e)
-        return False
-    return tradeId
-
-def GetClosedTradeIds():
-    global con, tradeId
-    try:
-        tradeId = con.get_closed_trade_ids()
-        print(">>> Liste des Identifications Clôturer :", tradeId)
-    except Exception as e:
-        print(">>> Erreur de la récupératoin des identifications des trades fermer, source d'erreur :", e)
-        return False
-    return tradeId
-
-def GetClosedPosition():
-    global con
-    try:
-        closed = con.get_closed_positions().T
-        print(">>> Liste des positions Clôturer:", closed)
-    except Exception as e:
-        print(">>> Erreur de la récupératoin des trades fermer, source d'erreur :", e)
-        return False
-    return closed
-    
-def GetAllTradeIds():
-    global con, tradeId
-    try:
-        tradeId = con.get_All_trade_ids()
-        print(">>> Liste des identifications des trades:", tradeId)
-    except Exception as e:
-        print(">>> Erreur de la récupératoin des identifications des trades, source d'erreur :", e)
-        return False
-    return tradeId
 
 # récupération des pairs à traiter
 def GetPairList():
@@ -369,39 +196,6 @@ def GetPairList():
             print(">>> !!! Erreur de la récupération de la liste des symboles dépuis le réseau !!!")
             print(">>> Erreur de la récupératoin des symboles, source d'erreur :", e)
             return False
-
-def GetAccountInfo():
-    global con
-    try:
-        account = con.get_accounts().T
-        print(">>> Info compte :")
-        print(account)
-    except Exception as e:
-        print(">>> Erreur de la récupératoin des information sur le compte, source d'erreur :", e)
-        return False
-    return account
-
-def GetAccountId(): 
-    global accountid
-    global con
-    try:
-        accountid = con.get_default_account()
-        print(">>> Récupération du compte numéro :", accountid)
-    except Exception as e:
-        print(">>> Erreur de la récupération de l'id du compte, source d'erreur :", e)
-        return False
-    return accountid
-
-def SetAccountId(accountid):
-    global con
-    try:
-        con.set_default_account(accountid)
-        print(">>> Activiation du compte numéro :", accountid)
-    except Exception as e:
-        print(">>> Erreur de l'enregistrement de l'id du compte, source d'erreur :", e)
-        return False
-    return True
-        
 
 
 #mbola atao anaty while ito fonction ito miaraka amin'ny paramètre de teste ohatra hoe trade=True

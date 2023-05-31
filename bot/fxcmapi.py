@@ -2,9 +2,9 @@
 
 import fxcmpy
 class fxcmapi:
-    def __init__(self, pair):
+    def __init__(self):
         self.con = ''
-        self.pair = pair
+        #self.pair = pair
 
     def GetOpenPositionsSummary(self):
         try:
@@ -194,3 +194,196 @@ class fxcmapi:
             print(">>> Erreur lors de la récupératoin de la balance, source d'erreur :", e)
             return False
         return account[0][3]
+
+    def GetNombrePosition(self):
+        try:
+            orders = self.con.get_open_positions().T
+            return orders.shape[1]
+        except Exception as e:
+            print(">>> Erreur de la récupératoin du nombre de position, source d'erreur :", e)
+            return 0
+        
+
+    def GetTicket(self):
+        try:
+            ticket = self.con.get_subscribed_symbols()
+            print(ticket)
+        except Exception as e:
+            print(">>> Erreur de la récupératoin du symbole en cours, source d'erreur :", e)
+            return False
+        return ticket
+
+    def SetTicket(self, pair):
+        try:
+            self.con.subscribe_market_data(pair)
+        except Exception as e:
+            print(">>> Erreur de l'inscription du nouveau symbole, source d'erreur :", e)
+            return False
+        return True
+
+    def UnSetTicket(self, pair):
+        try:
+            self.con.unsubscribe_market_data(pair)
+        except Exception as e:
+            print(">>> Erreur de la desinscription du symbole en cours, source d'erreur :", e)
+            return False
+        return True
+        
+    def Connection(self):
+        global server, config_file_name
+        try:
+            self.con = fxcmpy.fxcmpy(config_file=config_file_name, server = server)
+            print(">>> Connection effectuée avec succès")
+            connected = True
+        except Exception as e:
+            print(">>> Erreur de la connection, source d'erreur :", e)
+            return False
+        return True
+
+    def Deconnection(self):
+        try:
+            self.con.close()
+            print(">>> Deconnection effectuée avec succès")
+            connected = False
+        except Exception as e:
+            print(">>> Erreur de la déconnection, source d'erreur :", e)
+            return False
+        return True
+
+    # tsy tena obligatoire fa ahafahana maka ny information mikasika ny ticket na pair iray
+    #def GetInfoTicket():
+
+    def GetOpenPosition(self):
+        try:
+            positions = self.con.get_open_positions().T
+            print(positions)
+        except Exception as e:
+            print(">>> Erreur de la récupératoin des positions ouverts, source d'erreur :", e)
+            return False
+        return positions
+
+
+    def GetInfoPosition(self, tradeId):
+        try:
+            position = self.con.get_open_position(tradeId)
+            print(position)
+        except Exception as e:
+            print(">>> Erreur de la récupératoin des informations du trade, source d'erreur :", e)
+            return False
+        return position
+
+    def ClosePosition(self, tradeId, valeur):
+        try:
+            self.con.close_trade(trade_id = tradeId, amount = valeur)
+            print(">>> Fermeture de la position", tradeId, " pour la valeur :", valeur)
+        except Exception as e:
+            print(">>> Erreur de la fermeture du trades, source d'erreur :", e)
+            return False
+        return True
+
+    def CloseAllForSymbol(self, pair):
+        try:
+            self.con.close_all_for_symbol(pair)
+            print(">>> Fermeture de toute les positions pour le symbol:", pair)
+        except Exception as e:
+            print(">>> Erreur de la fermeture de tous les symboles, source d'erreur :", e)
+            return False
+        return True
+        
+    def CloseAll(self):
+        try:
+            self.con.close_all()
+            print(">>> Fermeture de toute les positions ouverte")
+        except Exception as e:
+            print(">>> Erreur de la fermeture de toute les positions, source d'erreur :", e)
+            return False
+        return True
+
+    def ChangeStopLoss(self, valeur, tdId):
+        global tradeId
+        try:
+            self.con.change_trade_stop_limit(tdId, is_in_pips = False, is_stop = False, rate = valeur)
+            print(">>> Modification stoploss pour la valeur :", valeur)
+        except Exception as e:
+            print(">>> Erreur du changement de stop loss, source d'erreur :", e)
+            return False
+        return True
+
+    def ChangeTakeProfit(self, valeur, tdId):
+        global tradeId
+        try:
+            self.con.change_order(order_id=tdId, amount=valeur)
+            print(">>> Modification takeprofit pour la valeur :", valeur)
+        except Exception as e:
+            print(">>> Erreur du changement du take profit, source d'erreur :", e)
+            return False
+        return True
+
+    def GetOpenTradeIds(self):
+        global tradeId
+        try:
+            tradeId = self.con.get_open_trade_ids()
+            print(">>> Liste des Identifications Ouverte :", tradeId)
+        except Exception as e:
+            print(">>> Erreur de la récupératoin des identifications des trades ouvert, source d'erreur :", e)
+            return False
+        return tradeId
+
+    def GetClosedTradeIds(self):
+        global tradeId
+        try:
+            tradeId = self.con.get_closed_trade_ids()
+            print(">>> Liste des Identifications Clôturer :", tradeId)
+        except Exception as e:
+            print(">>> Erreur de la récupératoin des identifications des trades fermer, source d'erreur :", e)
+            return False
+        return tradeId
+
+    def GetClosedPosition(self):
+        try:
+            closed = self.con.get_closed_positions().T
+            print(">>> Liste des positions Clôturer:", closed)
+        except Exception as e:
+            print(">>> Erreur de la récupératoin des trades fermer, source d'erreur :", e)
+            return False
+        return closed
+        
+    def GetAllTradeIds(self):
+        global tradeId
+        try:
+            tradeId = self.con.get_All_trade_ids()
+            print(">>> Liste des identifications des trades:", tradeId)
+        except Exception as e:
+            print(">>> Erreur de la récupératoin des identifications des trades, source d'erreur :", e)
+            return False
+        return tradeId
+
+    def GetAccountInfo(self):
+        try:
+            account = self.con.get_accounts().T
+            print(">>> Info compte :")
+            print(account)
+        except Exception as e:
+            print(">>> Erreur de la récupératoin des information sur le compte, source d'erreur :", e)
+            return False
+        return account
+
+    def GetAccountId(self): 
+        global accountid
+        try:
+            accountid = self.con.get_default_account()
+            print(">>> Récupération du compte numéro :", accountid)
+        except Exception as e:
+            print(">>> Erreur de la récupération de l'id du compte, source d'erreur :", e)
+            return False
+        return accountid
+
+    def SetAccountId(self, accountid):
+        try:
+            self.con.set_default_account(accountid)
+            print(">>> Activiation du compte numéro :", accountid)
+        except Exception as e:
+            print(">>> Erreur de l'enregistrement de l'id du compte, source d'erreur :", e)
+            return False
+        return True
+        
