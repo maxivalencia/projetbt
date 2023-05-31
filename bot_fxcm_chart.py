@@ -717,6 +717,7 @@ def DataTraitement():
         cci_sell = 100
         cci_buy = -100
         cci_mediane = 0
+        window = 14
         # traitement
         print(">>> Début du traitement des données récupérer")
         df = data
@@ -724,20 +725,20 @@ def DataTraitement():
         df['EMA_10_BID'] = EMAIndicator(df['bidclose'], 5).ema_indicator()
         df['EMA_30_ASK'] = EMAIndicator(df['askclose'], 15).ema_indicator()
         df['EMA_30_BID'] = EMAIndicator(df['bidclose'], 15).ema_indicator()
-        df['RSI_ASK'] = RSIIndicator(df['askclose'], 10).rsi() 
-        df['RSI_BID'] = RSIIndicator(df['bidclose'], 10).rsi() 
-        df['CCI_ASK'] = CCIIndicator(df['askhigh'], df['asklow'], df['askclose'], 10, 0.015).cci()
-        df['CCI_BID'] = CCIIndicator(df['bidhigh'], df['bidlow'], df['bidclose'], 10, 0.015).cci()
+        df['RSI_ASK'] = RSIIndicator(df['askclose'], window).rsi() 
+        df['RSI_BID'] = RSIIndicator(df['bidclose'], window).rsi() 
+        df['CCI_ASK'] = CCIIndicator(df['askhigh'], df['asklow'], df['askclose'], window, 0.015).cci()
+        df['CCI_BID'] = CCIIndicator(df['bidhigh'], df['bidlow'], df['bidclose'], window, 0.015).cci()
         #macd_ask = MACD(df['askclose'], 20, 10, 9)
         #macd_bid = MACD(df['bidclose'], 20, 10, 9)
-        macd_ask = MACD(df['askclose'], 10, 20, 10)
-        macd_bid = MACD(df['bidclose'], 10, 20, 10)
+        macd_ask = MACD(df['askclose'], 10, 20, window)
+        macd_bid = MACD(df['bidclose'], 10, 20, window)
         df['MACD_ASK'] = macd_ask.macd()
         df['MACD_BID'] = macd_bid.macd()
         df['MACDsignal_ASK'] = macd_ask.macd_signal()
         df['MACDsignal_BID'] = macd_bid.macd_signal()
-        bollinger_band_ask = BollingerBands(df["askclose"], 10, 2)
-        bollinger_band_bid = BollingerBands(df["bidclose"], 10, 2)
+        bollinger_band_ask = BollingerBands(df["askclose"], window, 2)
+        bollinger_band_bid = BollingerBands(df["bidclose"], window, 2)
         df['bb_bbm_ask'] = bollinger_band_ask.bollinger_mavg()
         df['bb_bbm_bid'] = bollinger_band_bid.bollinger_mavg()
         df['bb_bbh_ask'] = bollinger_band_ask.bollinger_hband()
