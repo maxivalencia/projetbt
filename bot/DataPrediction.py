@@ -23,7 +23,7 @@ class DataPrediction:
         self.temps_max_bid = datetime.now()
         self.temps_coupure = datetime.now()
 
-    def Preditcion(self):
+    def Preditcion(self, tendance_ascendant, tendance_descendant, tendance_ascendant_5m, tendance_descendant_5m):
         # variable global
         """ global capital_test
         global sl_test
@@ -39,13 +39,13 @@ class DataPrediction:
             print(">>> Début de la prédiction")
             # traitement
             df = self.data
-            capital = capital_test
-            risque = risque_test
+            #capital = capital_test
+            #risque = risque_test
             """ gain = roi_min_test
             lot = lot_test """
-            valeur_pip = valeur_pip_test
-            sl_en_dollar = capital * risque
-            sl_en_pips = (sl_en_dollar * valeur_pip)    
+            #valeur_pip = valeur_pip_test
+            #sl_en_dollar = capital * risque
+            #sl_en_pips = (sl_en_dollar * valeur_pip)    
             XXs = []
             for t in pd.DataFrame(df.index).values:
                 XXs.append(t)
@@ -145,7 +145,7 @@ class DataPrediction:
             valeur_actuel = df.iloc[-1, 3]
             heure = Xyy[-1]
             print('>>> Valeur actuelle : %f' % (valeur_actuel))
-            print('>>> Valeur stop loss en pips : %f' % (sl_en_pips))
+            #print('>>> Valeur stop loss en pips : %f' % (sl_en_pips))
             print('>>> Heure :', heure)
             
             # buy signal
@@ -172,7 +172,7 @@ class DataPrediction:
                     nb_signal_4 = nb_signal_4 + 1
                 #if((nb_signal_1 >= 2 and nb_signal_2 >= 2) or (nb_signal_1 >= 1 and nb_signal_2 >= 2)):
                 if((nb_signal_1 >= 3 and nb_signal_2 >= 1 and tendance_ascendant_5m == True) or(nb_signal_1 >= 2 and nb_signal_2 >= 1 and tendance_ascendant == True)): # and nb_signal_3 >= 1 and nb_signal_4 >= 1):
-                    sl = -(valeur_actuel - sl_en_pips)
+                    #sl = -(valeur_actuel - sl_en_pips)
                     #tp = max_bid
                     tp = 10
                     #if(sl > min_ask and (tp - valeur_actuel) > (2 * (valeur_actuel - sl)) and df["target_bid"][-1] == 1 and df["target_ask"][-1] == 0):
@@ -184,7 +184,7 @@ class DataPrediction:
                     #SetTakeProfit(tp)              
                     operation = 1  
                     print(">>> Fin de la prédiction")
-                    return True, operation, tp, sl
+                    return True, operation
             # sell signal
             if(df.iloc[-1,:].target_ask > 0):
                 nb_signal_1 = 0
@@ -207,7 +207,7 @@ class DataPrediction:
                     nb_signal_4 = nb_signal_4 + 1
                 #if((nb_signal_1 >= 2 and nb_signal_2 >= 2) or (nb_signal_1 >= 1 and nb_signal_2 >= 2)):
                 if((nb_signal_1 >= 3 and nb_signal_2 >= 1 and tendance_descendant_5m == True) or(nb_signal_1 >= 2 and nb_signal_2 >= 1 and tendance_descendant == True)): # and nb_signal_3 >= 1 and nb_signal_4 >= 1):
-                    sl = -(valeur_actuel + sl_en_pips)
+                    #sl = -(valeur_actuel + sl_en_pips)
                     #tp = min_ask
                     tp = 10
                     #if(sl < max_bid and (valeur_actuel - tp) > (2 * (sl - valeur_actuel)) and df["target_bid"][-1] == 0 and df["target_ask"][-1] == 1):
@@ -219,7 +219,7 @@ class DataPrediction:
                     #SetTakeProfit(tp)                
                     operation = -1
                     print(">>> Fin de la prédiction")
-                    return True, operation, tp, sl
+                    return True, operation
             print(">>> Fin de la prédiction")
         except Exception as e:
             print(">>> Erreur de la prédiction, source d'erreur :", e)
