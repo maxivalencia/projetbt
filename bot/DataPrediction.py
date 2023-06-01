@@ -6,32 +6,12 @@ from numpy import loadtxt
 from datetime import datetime
 from sklearn.linear_model import LinearRegression
 from datetime import timedelta
-from sklearn.model_selection import RepeatedStratifiedKFold, StratifiedKFold
-from sklearn.model_selection import KFold
 from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
-from sklearn.pipeline import Pipeline
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import classification_report
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import ExtraTreesClassifier 
-from sklearn.ensemble import AdaBoostClassifier 
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn import svm
-from sklearn.neural_network import MLPClassifier
-from sklearn.linear_model import LogisticRegression, LinearRegression
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import LinearRegression
 
 ### ------ Fonction de prévision ------ ### 
 class DataPrediction:
-    def __init__(self, data, con):
+    def __init__(self, data):
         self.data = data
         self.max_ask = 0.0
         self.max_bid = 0.0
@@ -42,28 +22,27 @@ class DataPrediction:
         self.temps_max_ask = datetime.now()
         self.temps_max_bid = datetime.now()
         self.temps_coupure = datetime.now()
-        self.con = con
 
     def Preditcion(self):
         # variable global
-        global capital_test
+        """ global capital_test
         global sl_test
-        global tp_test
+        global tp_test """
         global operation
-        global risque_test
+        """ global risque_test
         global roi_min_test
         global lot_test
         global valeur_pip_test
         global operation_chartiste
-        global tendance_ascendant, tendance_descendant, tendance_ascendant_5m, tendance_descendant_5m
+        global tendance_ascendant, tendance_descendant, tendance_ascendant_5m, tendance_descendant_5m """
         try:
             print(">>> Début de la prédiction")
             # traitement
             df = self.data
             capital = capital_test
             risque = risque_test
-            gain = roi_min_test
-            lot = lot_test
+            """ gain = roi_min_test
+            lot = lot_test """
             valeur_pip = valeur_pip_test
             sl_en_dollar = capital * risque
             sl_en_pips = (sl_en_dollar * valeur_pip)    
@@ -204,6 +183,7 @@ class DataPrediction:
                     #SetStopLoss(sl)
                     #SetTakeProfit(tp)              
                     operation = 1  
+                    print(">>> Fin de la prédiction")
                     return True, operation, tp, sl
             # sell signal
             if(df.iloc[-1,:].target_ask > 0):
@@ -238,6 +218,7 @@ class DataPrediction:
                     #SetStopLoss(sl)
                     #SetTakeProfit(tp)                
                     operation = -1
+                    print(">>> Fin de la prédiction")
                     return True, operation, tp, sl
             print(">>> Fin de la prédiction")
         except Exception as e:

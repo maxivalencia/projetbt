@@ -59,9 +59,9 @@ class fxcmapi:
             return False
         return orders[-1]
 
-    def SetSellOrder(self, valeur=1, tp=5, sl=-2, date_expiration=None):
+    def SetSellOrder(self, pair, valeur=1, tp=5, sl=-2, date_expiration=None):
         try:
-            order = self.con.create_entry_order(symbol=self.pair, is_buy=False, amount=valeur, time_in_force='GTC', order_type="Entry", limit=tp, is_in_pips=True, rate=tp, stop=sl, trailing_step=1, trailing_stop_step=1, order_range=None, expiration=date_expiration, account_id=self.GetAccountId())
+            order = self.con.create_entry_order(symbol=pair, is_buy=False, amount=valeur, time_in_force='GTC', order_type="Entry", limit=tp, is_in_pips=True, rate=tp, stop=sl, trailing_step=1, trailing_stop_step=1, order_range=None, expiration=date_expiration, account_id=self.GetAccountId())
             #print(GetOrderIds())
             print(order)
         except Exception as e:
@@ -69,9 +69,9 @@ class fxcmapi:
             return False
         return True
 
-    def SetBuyOrder(self, valeur=1, tp=5, sl=-2, date_expiration=None):
+    def SetBuyOrder(self, pair, valeur=1, tp=5, sl=-2, date_expiration=None):
         try:
-            order = self.con.create_entry_order(symbol=self.pair, is_buy=True, amount=valeur, time_in_force='GTC', order_type="Entry", limit=tp, is_in_pips=True, rate=tp, stop=sl, trailing_step=1, trailing_stop_step=1, order_range=None, expiration=date_expiration, account_id=self.GetAccountId())
+            order = self.con.create_entry_order(symbol=pair, is_buy=True, amount=valeur, time_in_force='GTC', order_type="Entry", limit=tp, is_in_pips=True, rate=tp, stop=sl, trailing_step=1, trailing_stop_step=1, order_range=None, expiration=date_expiration, account_id=self.GetAccountId())
             #print(GetOrderIds())
             print(order)
         except Exception as e:
@@ -79,28 +79,28 @@ class fxcmapi:
             return False
         return True
     
-    def SetSellTrade(self, valeur=1, tp=5, sl=-2):
+    def SetSellTrade(self, pair, valeur=1, tp=5, sl=-2):
         try:
-            order = self.con.open_trade(symbol=self.pair, is_buy=False, amount=valeur, time_in_force='GTC', order_type='AtMarket', rate=tp, is_in_pips=True, limit=tp, at_market=0, stop=sl, trailing_step=1, account_id=self.GetAccountId())
+            order = self.con.open_trade(symbol=pair, is_buy=False, amount=valeur, time_in_force='GTC', order_type='AtMarket', rate=tp, is_in_pips=True, limit=tp, at_market=0, stop=sl, trailing_step=1, account_id=self.GetAccountId())
             print(order)
         except Exception as e:
             print(">>> Erreur lors de la prise de position sell, source d'erreur :", e)
             return False
         return True
 
-    def SetBuyTrade(self, valeur=1, tp=5, sl=-2):
+    def SetBuyTrade(self, pair, valeur=1, tp=5, sl=-2):
         try:
-            order = self.con.open_trade(symbol=self.pair, is_buy=True, amount=valeur, time_in_force='GTC', order_type='AtMarket', rate=tp, is_in_pips=True, limit=tp, at_market=0, stop=sl, trailing_step=1, account_id=self.GetAccountId())
+            order = self.con.open_trade(symbol=pair, is_buy=True, amount=valeur, time_in_force='GTC', order_type='AtMarket', rate=tp, is_in_pips=True, limit=tp, at_market=0, stop=sl, trailing_step=1, account_id=self.GetAccountId())
             print(order)
         except Exception as e:
             print(">>> Erreur lors de la prise de position buy, source d'erreur :", e)
             return False
         return True
 
-    def SetSellPosition(self, valeur=1, tp=5, sl=-2):
+    def SetSellPosition(self, pair, valeur=1, tp=5, sl=-2):
         try:
             #order = con.create_market_sell_order(symbol=pair, amount=valeur, is_in_pips=True, stop_loss=sl, take_profit=tp)
-            order = self.con.create_market_sell_order(symbol=self.pair, amount=valeur)
+            order = self.con.create_market_sell_order(symbol=pair, amount=valeur)
             trade_id = self.con.get_open_trade_ids()[-1]
             self.con.change_trade_stop_limit(trade_id, is_stop=False, rate=tp, is_in_pips=True, trailing_step=0)
             self.con.change_trade_stop_limit(trade_id, is_stop=True, rate=sl, is_in_pips=True, trailing_step=0)
@@ -115,10 +115,10 @@ class fxcmapi:
             return False
         return True
         
-    def SetBuyPosition(self, valeur=1, tp=5, sl=-2):
+    def SetBuyPosition(self, pair, valeur=1, tp=5, sl=-2):
         try:
             #order = con.create_market_buy_order(symbol=pair, amount=valeur, is_in_pips=True, stop_loss=sl, take_profit=tp)
-            order = self.con.create_market_buy_order(symbol=self.pair, amount=valeur)
+            order = self.con.create_market_buy_order(symbol=pair, amount=valeur)
             trade_id = self.con.get_open_trade_ids()[-1]
             self.con.change_trade_stop_limit(trade_id, is_stop=False, rate=tp, is_in_pips=True, trailing_step=0)
             self.con.change_trade_stop_limit(trade_id, is_stop=True, rate=sl, is_in_pips=True, trailing_step=0)
@@ -229,12 +229,10 @@ class fxcmapi:
             return False
         return True
         
-    def Connection(self):
-        global server, config_file_name
+    def Connection(self, server, config_file_name):
         try:
             self.con = fxcmpy.fxcmpy(config_file=config_file_name, server = server)
             print(">>> Connection effectuée avec succès")
-            connected = True
         except Exception as e:
             print(">>> Erreur de la connection, source d'erreur :", e)
             return False
@@ -244,7 +242,6 @@ class fxcmapi:
         try:
             self.con.close()
             print(">>> Deconnection effectuée avec succès")
-            connected = False
         except Exception as e:
             print(">>> Erreur de la déconnection, source d'erreur :", e)
             return False
@@ -300,7 +297,6 @@ class fxcmapi:
         return True
 
     def ChangeStopLoss(self, valeur, tdId):
-        global tradeId
         try:
             self.con.change_trade_stop_limit(tdId, is_in_pips = False, is_stop = False, rate = valeur)
             print(">>> Modification stoploss pour la valeur :", valeur)
@@ -310,7 +306,6 @@ class fxcmapi:
         return True
 
     def ChangeTakeProfit(self, valeur, tdId):
-        global tradeId
         try:
             self.con.change_order(order_id=tdId, amount=valeur)
             print(">>> Modification takeprofit pour la valeur :", valeur)
@@ -319,8 +314,7 @@ class fxcmapi:
             return False
         return True
 
-    def GetOpenTradeIds(self):
-        global tradeId
+    def GetOpenTradeIds(self, tradeId):
         try:
             tradeId = self.con.get_open_trade_ids()
             print(">>> Liste des Identifications Ouverte :", tradeId)
@@ -329,8 +323,7 @@ class fxcmapi:
             return False
         return tradeId
 
-    def GetClosedTradeIds(self):
-        global tradeId
+    def GetClosedTradeIds(self, tradeId):
         try:
             tradeId = self.con.get_closed_trade_ids()
             print(">>> Liste des Identifications Clôturer :", tradeId)
@@ -348,8 +341,7 @@ class fxcmapi:
             return False
         return closed
         
-    def GetAllTradeIds(self):
-        global tradeId
+    def GetAllTradeIds(self, tradeId):
         try:
             tradeId = self.con.get_All_trade_ids()
             print(">>> Liste des identifications des trades:", tradeId)
@@ -369,7 +361,6 @@ class fxcmapi:
         return account
 
     def GetAccountId(self): 
-        global accountid
         try:
             accountid = self.con.get_default_account()
             print(">>> Récupération du compte numéro :", accountid)
@@ -386,4 +377,12 @@ class fxcmapi:
             print(">>> Erreur de l'enregistrement de l'id du compte, source d'erreur :", e)
             return False
         return True
-        
+
+    def GetPairsLists(self):
+        try:
+            pairs_list = self.con.get_instruments()
+            print(">>> Liste des symboles récupérer avec succès !!!")
+        except Exception as e:
+            print(">>> Erreur de la récupératoin des symboles, source d'erreur :", e)
+            return False
+        return pairs_list

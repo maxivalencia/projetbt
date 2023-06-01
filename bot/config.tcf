@@ -1,0 +1,8 @@
+Pairlist=EUR/USD,USD/JPY,USD/CHF,USD/CAD,AUD/JPY,NZD/JPY
+Lot=1
+NombrePosition=5
+IsTrade=True
+SourceType=File
+TakeProfit=5
+StopLoss=2
+AccountId=1829628

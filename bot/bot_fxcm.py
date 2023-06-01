@@ -163,39 +163,6 @@ def GetInfoTrade():
     print(info)
 """
 
-# récupération des pairs à traiter
-def GetPairList():
-    global pairs_list, list_file_name, source_file_name
-    source = 'File'
-    try:
-        fichier = open(source_file_name, "r")
-        source = fichier.read()
-        fichier.close()
-    except:
-        source = 'File'
-    if(source == 'File'):
-        try:
-            file = open(list_file_name, "r")
-            pair_list = file.read()
-            pairs_list = pair_list.split(",")
-            file.close()
-            print(">>> Liste des symboles récupérer avec succès !!!")
-            print(pairs_list)
-            return pairs_list
-        except Exception as e:
-            print(">>> !!! Erreur de la récupération de la liste des symboles dépuis le fichier !!!")
-            print(">>> Erreur de la récupératoin des symboles, source d'erreur :", e)
-            return False
-    else:
-        try:
-            pairs_list = con.get_instruments()
-            print(">>> Liste des symboles récupérer avec succès !!!")
-            print(pairs_list)
-            return pairs_list
-        except Exception as e:
-            print(">>> !!! Erreur de la récupération de la liste des symboles dépuis le réseau !!!")
-            print(">>> Erreur de la récupératoin des symboles, source d'erreur :", e)
-            return False
 
 
 #mbola atao anaty while ito fonction ito miaraka amin'ny paramètre de teste ohatra hoe trade=True
@@ -205,45 +172,7 @@ id = GetAccountId()
 print(id)
 Deconnection()
 """
-def GetTradeStatus():
-    global trade
-    try:
-        f = open(status_file, "r")
-        if((f.read() == "True") or (f.read() == "true") or (f.read() == "TRUE") or (f.read() == "t") or (f.read() == "T")):
-            trade = True
-        else:
-            trade = False
-        f.close()
-    except Exception as e:
-        print(">>> Erreur de la status de trading, source d'erreur :", e)
     
-def GetAccountIdFromFile():
-    global trade
-    try:
-        f = open(account_file, "r")
-        account = f.read()
-        SetAccountId(account)
-        f.close()
-    except Exception as e:
-        print(">>> Erreur de récupération d'id depuis le fichier, source d'erreur :", e)
-    
-def GetPositionMax():
-    global max_position
-    try:
-        f = open(nb_position_file, "r")
-        max_position = int(f.read())
-        f.close()
-    except Exception as e:
-        print(">>> Erreur lors de la récupération nombre de position maximal, source d'erreur :", e)
-
-def GetTailleLot():
-    global lot_test
-    try:
-        f = open(taille_lot_file, "r")
-        lot_test = int(f.read())
-        f.close()
-    except Exception as e:
-        print(">>> Erreur lors de la récupération nombre de la taille du lot, source d'erreur :", e)
 
 """
 Connection()
