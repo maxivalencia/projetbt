@@ -52,10 +52,10 @@ class GetData:
             print(">>> Erreur lors de l'enregistrement des données dans un fichier, source d'erreur :", e)
             return False
         
-    def DataRecuperation(self, pair, timeframe):        
+    def DataRecuperation(self):        
         try:
             data1 = self.GetDataFromFile(self.pair)
-            if(self.con.is_subscribed(pair)):
+            if(self.con.is_subscribed(self.pair)):
                 print(">>> Début de la récupération des données du symbol", self.pair)
                 #mbola amboarina rehefa milamina ny code
                 #data1 = False

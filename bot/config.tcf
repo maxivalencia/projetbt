@@ -1,8 +1,14 @@
 Pairlist=EUR/USD,USD/JPY,USD/CHF,USD/CAD,AUD/JPY,NZD/JPY
 Lot=1
 NombrePosition=5
+TimeFrame1=m1
+TimeFrame2=m2
+TimeFrame3=m15
 IsTrade=True
 SourceType=File
 TakeProfit=5
 StopLoss=2
 AccountId=1829628
+CompteurLimite=10
+Server=demo
+ConfigFileName=FXCM.cfg

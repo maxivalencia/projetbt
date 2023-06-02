@@ -28,7 +28,7 @@ class DataPrediction:
         """ global capital_test
         global sl_test
         global tp_test """
-        global operation
+        operation = 0
         """ global risque_test
         global roi_min_test
         global lot_test

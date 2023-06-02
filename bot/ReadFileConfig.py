@@ -13,22 +13,34 @@ class ReadFileConfig:
                 ls = line.split("=")
                 parametre = ls[0].strip()
                 valeur = ls[1].strip()
-                if parametre == "PairList":
+                if parametre == "IsTrade":
                     self.trade_status = valeur
-                if parametre == "PairList":
+                if parametre == "AccountId":
                     self.account = valeur
-                if parametre == "PairList":
+                if parametre == "NombrePosition":
                     self.nombre_max_position = valeur
-                if parametre == "PairList":
+                if parametre == "Lot":
                     self.lot = valeur
-                if parametre == "PairList":
+                if parametre == "SourceType":
                     self.source_type = valeur
-                if parametre == "PairList":
+                if parametre == "TakeProfit":
                     self.take_profit = valeur
-                if parametre == "PairList":
+                if parametre == "StopLoss":
                     self.stop_loss = valeur
-                if parametre == "PairList":
+                if parametre == "Pairlist":
                     self.pair_list = valeur
+                if parametre == "TimeFrame1":
+                    self.timeframe1 = valeur
+                if parametre == "TimeFrame2":
+                    self.timeframe2 = valeur
+                if parametre == "TimeFrame3":
+                    self.timeframe3 = valeur
+                if parametre == "CompteurLimite":
+                    self.compteur_limite = valeur
+                if parametre == "Server":
+                    self.server = valeur
+                if parametre == "ConfigFileName":
+                    self.config_file_name = valeur
     
     def GetTradeStatus(self):
         return self.trade_status
@@ -54,4 +66,22 @@ class ReadFileConfig:
     # récupération des pairs à traiter
     def GetPairList(self):
         if(self.source_type == 'File'):
-            return self.pair_list       
+            return self.pair_list.split(",")  
+
+    def GetTimeFrame1(self):
+        return self.timeframe1
+
+    def GetTimeFrame2(self):
+        return self.timeframe2
+
+    def GetTimeFrame3(self):
+        return self.timeframe3   
+
+    def GetCompteurLimite(self):
+        return self.compteur_limite
+
+    def GetServer(self):
+        return self.server
+
+    def GetConfigFileName(self):
+        return self.config_file_name

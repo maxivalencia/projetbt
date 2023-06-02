@@ -386,3 +386,6 @@ class fxcmapi:
             print(">>> Erreur de la récupératoin des symboles, source d'erreur :", e)
             return False
         return pairs_list
+    
+    def GetConnection(self):
+        return self.con

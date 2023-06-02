@@ -15,7 +15,7 @@ class DataTraitement:
         self.data = data
         self.window = window
 
-    def DataTraitement(self):
+    def GetDataTraitement(self):
         try:
             rsi_sell = 70
             rsi_buy = 30
