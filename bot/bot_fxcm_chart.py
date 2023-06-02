@@ -49,6 +49,7 @@ while(True):
         print(">>> !!! Connexion !!!")
         connected = fx.Connection(file.GetServer(), file.GetConfigFileName())
         for td_id in fx.GetTradeIds():
+            print("arriver ici")
             fx.SetStopLimite(td_id, file.GetTakeProfit(), file.GetStopLoss())
         while(connected == True and file.GetTradeStatus() == True):
             # forcena mampiditra sl sy tp eto fa misy fotoana tsy tafiditra ilay izy
