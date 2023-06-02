@@ -95,7 +95,7 @@ connected = False
 compteur = 0
 compteur_limite = 10
 #aujourdhui = date.today()
-aujourdhui = datetime.now()
+
 tendance_ascendant = False
 tendance_descendant = False
 tendance_ascendant_5m = False

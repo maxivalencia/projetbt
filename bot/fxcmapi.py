@@ -146,10 +146,11 @@ class fxcmapi:
 
     def GetTradeIds(self):
         try:
-            return self.con.get_open_trade_ids()
+            tradeId = self.con.get_open_trade_ids()
+            return tradeId
         except Exception as e:
             print(">>> Erreur de la récupération des identifications des trades, source d'erreur :", e)
-            return []
+            return False
 
     def GetOrderId(self, numero):
         try:
