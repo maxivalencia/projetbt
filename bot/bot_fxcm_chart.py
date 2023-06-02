@@ -38,17 +38,19 @@ while(True):
     #Connection()
     #SetAccountId(accountid)
     #GetAccountId()
-    try:
-        file = ReadFileConfig()        
+    fx = fxcmapi()
+    file = ReadFileConfig()
+    connected = False
+    try:        
         if(file.GetTradeStatus() == True):
             break
-        fx = fxcmapi()
         print(">>> !!! Connexion !!!")
         connected = fx.Connection(file.GetServer(), file.GetConfigFileName())
         for td_id in fx.GetTradeIds():
             fx.SetStopLimite(td_id, file.GetTakeProfit(), file.GetStopLoss())
         while(connected == True and file.GetTradeStatus() == True):
             # forcena mampiditra sl sy tp eto fa misy fotoana tsy tafiditra ilay izy
+            file.ReadConfig()
             for td_id in fx.GetTradeIds():
                 fx.SetStopLimite(td_id, file.GetTakeProfit(), file.GetStopLoss())
             lot = file.GetLot()

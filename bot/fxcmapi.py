@@ -148,7 +148,7 @@ class fxcmapi:
             return self.con.get_open_trade_ids()
         except Exception as e:
             print(">>> Erreur de la récupératoin des identifications des trades, source d'erreur :", e)
-            return False
+            return []
 
     def GetOrderId(self, numero):
         try:
@@ -242,10 +242,10 @@ class fxcmapi:
         try:
             self.con.close()
             print(">>> Deconnection effectuée avec succès")
+            return False
         except Exception as e:
             print(">>> Erreur de la déconnection, source d'erreur :", e)
-            return False
-        return True
+            return True
 
     # tsy tena obligatoire fa ahafahana maka ny information mikasika ny ticket na pair iray
     #def GetInfoTicket():

@@ -5,6 +5,20 @@ import os
 class ReadFileConfig:
     def __init__(self, filename="config.tcf"):
         self.filename = filename
+        self.pair_list=""
+        self.lot=1
+        self.nombre_max_position=10
+        self.timeframe1=""
+        self.timeframe2=""
+        self.timeframe3=""
+        self.trade_status=False
+        self.source_type="File"
+        self.take_profit=5
+        self.stop_loss=2
+        self.account=""
+        self.compteur_limite=10
+        self.server="demo"
+        self.config_file_name="FXCM.cfg"
 
     def ReadConfig(self):
         with open(self.filename, "r") as f:
@@ -14,19 +28,22 @@ class ReadFileConfig:
                 parametre = ls[0].strip()
                 valeur = ls[1].strip()
                 if parametre == "IsTrade":
-                    self.trade_status = valeur
+                    if(valeur == "True"):
+                        self.trade_status = True
+                    else:
+                        self.trade_status = False
                 if parametre == "AccountId":
                     self.account = valeur
                 if parametre == "NombrePosition":
-                    self.nombre_max_position = valeur
+                    self.nombre_max_position = int(valeur)
                 if parametre == "Lot":
-                    self.lot = valeur
+                    self.lot = int(valeur)
                 if parametre == "SourceType":
                     self.source_type = valeur
                 if parametre == "TakeProfit":
-                    self.take_profit = valeur
+                    self.take_profit = int(valeur)
                 if parametre == "StopLoss":
-                    self.stop_loss = valeur
+                    self.stop_loss = int(valeur)
                 if parametre == "Pairlist":
                     self.pair_list = valeur
                 if parametre == "TimeFrame1":
@@ -36,7 +53,7 @@ class ReadFileConfig:
                 if parametre == "TimeFrame3":
                     self.timeframe3 = valeur
                 if parametre == "CompteurLimite":
-                    self.compteur_limite = valeur
+                    self.compteur_limite = int(valeur)
                 if parametre == "Server":
                     self.server = valeur
                 if parametre == "ConfigFileName":
