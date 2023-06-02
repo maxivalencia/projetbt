@@ -38,10 +38,12 @@ while(True):
     #Connection()
     #SetAccountId(accountid)
     #GetAccountId()
-    fx = fxcmapi()
     file = ReadFileConfig()
+    file.ReadConfig()
+    fx = fxcmapi(file.GetServer(), file.GetConfigFileName())
     connected = False
     try:        
+        file.ReadConfig()
         if(file.GetTradeStatus() == True):
             break
         print(">>> !!! Connexion !!!")
@@ -58,7 +60,7 @@ while(True):
                 # eto no atao ny fonction de trading no antsoina
                 try:
                     print(">>> Récupération des symboles à traiter")
-                    ReadFileConfig.GetPairList()
+                    file.GetPairList()
                 except Exception as e:
                     print(">>> Erreur durant la récupération des symboles, source d'erreur :", e)
                     print(">>> Erreur lors de la récupération des symboles à traiter")
@@ -93,7 +95,7 @@ while(True):
                                 pass
                             if(is_recup == True):
                                 #print(data.head())
-                                tdata = DataTraitement(data)
+                                tdata = DataTraitement(data, file.GetWindow())
                                 is_trait = False
                                 is_trait, data = tdata.GetDataTraitement()
                                 if(is_trait == True):

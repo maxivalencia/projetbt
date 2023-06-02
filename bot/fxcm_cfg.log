@@ -1,0 +1,52 @@
+|ERROR|2023-06-02 13:01:40,432|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-06-02 13:01:40,432|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-06-02 13:01:40,432|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-06-02 13:01:40,432|Params: {'trade_id': 75016666, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 2.0, 'trailing_step': 0}
+|ERROR|2023-06-02 13:01:40,434|Bearer token: Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-06-02 13:01:40,434|Connection status: established
+|ERROR|2023-06-02 13:01:40,434|Socket session id: GL5z-PCQkN6fW6SwAAIb
+|ERROR|2023-06-02 13:01:40,434|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-06-02 13:01:44,294|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-06-02 13:01:44,295|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-06-02 13:01:44,295|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-06-02 13:01:44,296|Params: {'trade_id': 75016666, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 2.0, 'trailing_step': 0}
+|ERROR|2023-06-02 13:01:44,296|Bearer token: Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-06-02 13:01:44,296|Connection status: established
+|ERROR|2023-06-02 13:01:44,297|Socket session id: GL5z-PCQkN6fW6SwAAIb
+|ERROR|2023-06-02 13:01:44,297|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-06-02 13:01:46,883|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-06-02 13:01:46,884|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-06-02 13:01:46,884|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-06-02 13:01:46,884|Params: {'trade_id': 75016666, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 2.0, 'trailing_step': 0}
+|ERROR|2023-06-02 13:01:46,884|Bearer token: Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-06-02 13:01:46,884|Connection status: established
+|ERROR|2023-06-02 13:01:46,884|Socket session id: GL5z-PCQkN6fW6SwAAIb
+|ERROR|2023-06-02 13:01:46,884|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-06-02 13:01:51,011|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-06-02 13:01:51,012|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-06-02 13:01:51,012|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-06-02 13:01:51,012|Params: {'trade_id': 75016666, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 2.0, 'trailing_step': 0}
+|ERROR|2023-06-02 13:01:51,012|Bearer token: Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-06-02 13:01:51,013|Connection status: established
+|ERROR|2023-06-02 13:01:51,013|Socket session id: GL5z-PCQkN6fW6SwAAIb
+|ERROR|2023-06-02 13:01:51,013|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-06-02 13:01:55,185|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-06-02 13:01:55,185|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-06-02 13:01:55,185|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-06-02 13:01:55,185|Params: {'trade_id': 75016666, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 2.0, 'trailing_step': 0}
+|ERROR|2023-06-02 13:01:55,185|Bearer token: Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-06-02 13:01:55,186|Connection status: established
+|ERROR|2023-06-02 13:01:55,186|Socket session id: GL5z-PCQkN6fW6SwAAIb
+|ERROR|2023-06-02 13:01:55,186|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-06-02 13:01:57,075|Server reports an error: {'executed': False, 'error': '{"code":18,"message":"The Stop distance must be ","parameters":["<",0]}'}.
+|ERROR|2023-06-02 13:01:57,076|URL: https://api-demo.fxcm.com:443/trading/change_trade_stop_limit
+|ERROR|2023-06-02 13:01:57,076|Headers: {'User-Agent': 'request', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '71'}
+|ERROR|2023-06-02 13:01:57,077|Params: {'trade_id': 75016666, 'is_in_pips': 'true', 'is_stop': 'true', 'rate': 2.0, 'trailing_step': 0}
+|ERROR|2023-06-02 13:01:57,077|Bearer token: Bearer GL5z-PCQkN6fW6SwAAIbb95692a9557373f325ae43cc6401b5d74a097959
+|ERROR|2023-06-02 13:01:57,077|Connection status: established
+|ERROR|2023-06-02 13:01:57,078|Socket session id: GL5z-PCQkN6fW6SwAAIb
+|ERROR|2023-06-02 13:01:57,078|Can not parse server answer to json object: {"response":{"executed":false,"error":"{\"code\":18,\"message\":\"The Stop distance must be \",\"parameters\":[\"<\",0]}"},"data":{}}.
+|ERROR|2023-06-02 13:29:20,628|packet queue is empty, aborting
+|ERROR|2023-06-02 13:34:44,090|packet queue is empty, aborting
+|ERROR|2023-06-02 13:40:02,693|packet queue is empty, aborting
+|ERROR|2023-06-02 13:46:14,375|packet queue is empty, aborting

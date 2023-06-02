@@ -4,6 +4,7 @@ NombrePosition=5
 TimeFrame1=m1
 TimeFrame2=m2
 TimeFrame3=m15
+Window=20
 IsTrade=True
 SourceType=File
 TakeProfit=5

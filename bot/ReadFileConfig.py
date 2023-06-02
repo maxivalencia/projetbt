@@ -5,26 +5,27 @@ import os
 class ReadFileConfig:
     def __init__(self, filename="config.tcf"):
         self.filename = filename
-        self.pair_list=""
-        self.lot=1
-        self.nombre_max_position=10
-        self.timeframe1=""
-        self.timeframe2=""
-        self.timeframe3=""
-        self.trade_status=False
-        self.source_type="File"
-        self.take_profit=5
-        self.stop_loss=2
-        self.account=""
-        self.compteur_limite=10
-        self.server="demo"
-        self.config_file_name="FXCM.cfg"
+        self.pair_list = []
+        self.lot = 1
+        self.nombre_max_position = 10
+        self.timeframe1 = ""
+        self.timeframe2 = ""
+        self.timeframe3 = ""
+        self.trade_status = False
+        self.source_type = "File"
+        self.take_profit = 5
+        self.stop_loss = 2
+        self.account = ""
+        self.compteur_limite = 10
+        self.server = "demo"
+        self.config_file_name = "FXCM.cfg"
+        self.window = 20
 
     def ReadConfig(self):
         with open(self.filename, "r") as f:
             lines = f.readlines()
             for line in lines:
-                ls = line.split("=")
+                ls = line.split("=", 1)
                 parametre = ls[0].strip()
                 valeur = ls[1].strip()
                 if parametre == "IsTrade":
@@ -45,7 +46,7 @@ class ReadFileConfig:
                 if parametre == "StopLoss":
                     self.stop_loss = int(valeur)
                 if parametre == "Pairlist":
-                    self.pair_list = valeur
+                    self.pair_list = valeur.split(",") 
                 if parametre == "TimeFrame1":
                     self.timeframe1 = valeur
                 if parametre == "TimeFrame2":
@@ -58,6 +59,8 @@ class ReadFileConfig:
                     self.server = valeur
                 if parametre == "ConfigFileName":
                     self.config_file_name = valeur
+                if parametre == "Window":
+                    self.window = int(valeur)
     
     def GetTradeStatus(self):
         return self.trade_status
@@ -82,8 +85,8 @@ class ReadFileConfig:
     
     # récupération des pairs à traiter
     def GetPairList(self):
-        if(self.source_type == 'File'):
-            return self.pair_list.split(",")  
+        #if(self.source_type == 'File'):
+        return self.pair_list 
 
     def GetTimeFrame1(self):
         return self.timeframe1
@@ -102,3 +105,6 @@ class ReadFileConfig:
 
     def GetConfigFileName(self):
         return self.config_file_name
+
+    def GetWindow(self):
+        return self.window

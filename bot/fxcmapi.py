@@ -2,9 +2,10 @@
 
 import fxcmpy
 class fxcmapi:
-    def __init__(self):
-        self.con = ''
+    def __init__(self, server, config_file_name):
+        self.con = self.Connection(server, config_file_name)
         #self.pair = pair
+        pass
 
     def GetOpenPositionsSummary(self):
         try:
@@ -147,7 +148,7 @@ class fxcmapi:
         try:
             return self.con.get_open_trade_ids()
         except Exception as e:
-            print(">>> Erreur de la récupératoin des identifications des trades, source d'erreur :", e)
+            print(">>> Erreur de la récupération des identifications des trades, source d'erreur :", e)
             return []
 
     def GetOrderId(self, numero):
@@ -155,7 +156,7 @@ class fxcmapi:
             order_id = self.con.get_order_ids()[numero]
             print(order_id)
         except Exception as e:
-            print(">>> Erreur de la récupératoin de l'identifications de l'ordre, source d'erreur :", e)
+            print(">>> Erreur de la récupération de l'identifications de l'ordre, source d'erreur :", e)
             return False
         return order_id
 
@@ -173,7 +174,7 @@ class fxcmapi:
             order = self.con.change_order_stop_limit(order_id=order_id, is_stop_in_pips=True, is_limit_in_pips=True, limit=sl, stop=-1)
             print(order)
         except Exception as e:
-            print(">>> Erreur lors de la récupératoin des identifications des trades, source d'erreur :", e)
+            print(">>> Erreur lors de la récupération des identifications des trades, source d'erreur :", e)
             return False
         return order
 
@@ -191,7 +192,7 @@ class fxcmapi:
             account = self.con.get_accounts().T
             print("Balance actuelle :", account[0][3])
         except Exception as e:
-            print(">>> Erreur lors de la récupératoin de la balance, source d'erreur :", e)
+            print(">>> Erreur lors de la récupération de la balance, source d'erreur :", e)
             return False
         return account[0][3]
 
@@ -200,7 +201,7 @@ class fxcmapi:
             orders = self.con.get_open_positions().T
             return orders.shape[1]
         except Exception as e:
-            print(">>> Erreur de la récupératoin du nombre de position, source d'erreur :", e)
+            print(">>> Erreur de la récupération du nombre de position, source d'erreur :", e)
             return 0
         
 
@@ -209,7 +210,7 @@ class fxcmapi:
             ticket = self.con.get_subscribed_symbols()
             print(ticket)
         except Exception as e:
-            print(">>> Erreur de la récupératoin du symbole en cours, source d'erreur :", e)
+            print(">>> Erreur de la récupération du symbole en cours, source d'erreur :", e)
             return False
         return ticket
 
@@ -255,7 +256,7 @@ class fxcmapi:
             positions = self.con.get_open_positions().T
             print(positions)
         except Exception as e:
-            print(">>> Erreur de la récupératoin des positions ouverts, source d'erreur :", e)
+            print(">>> Erreur de la récupération des positions ouverts, source d'erreur :", e)
             return False
         return positions
 
@@ -265,7 +266,7 @@ class fxcmapi:
             position = self.con.get_open_position(tradeId)
             print(position)
         except Exception as e:
-            print(">>> Erreur de la récupératoin des informations du trade, source d'erreur :", e)
+            print(">>> Erreur de la récupération des informations du trade, source d'erreur :", e)
             return False
         return position
 
@@ -314,21 +315,21 @@ class fxcmapi:
             return False
         return True
 
-    def GetOpenTradeIds(self, tradeId):
+    def GetOpenTradeIds(self):
         try:
             tradeId = self.con.get_open_trade_ids()
             print(">>> Liste des Identifications Ouverte :", tradeId)
         except Exception as e:
-            print(">>> Erreur de la récupératoin des identifications des trades ouvert, source d'erreur :", e)
+            print(">>> Erreur de la récupération des identifications des trades ouvert, source d'erreur :", e)
             return False
         return tradeId
 
-    def GetClosedTradeIds(self, tradeId):
+    def GetClosedTradeIds(self):
         try:
             tradeId = self.con.get_closed_trade_ids()
             print(">>> Liste des Identifications Clôturer :", tradeId)
         except Exception as e:
-            print(">>> Erreur de la récupératoin des identifications des trades fermer, source d'erreur :", e)
+            print(">>> Erreur de la récupération des identifications des trades fermer, source d'erreur :", e)
             return False
         return tradeId
 
@@ -337,16 +338,16 @@ class fxcmapi:
             closed = self.con.get_closed_positions().T
             print(">>> Liste des positions Clôturer:", closed)
         except Exception as e:
-            print(">>> Erreur de la récupératoin des trades fermer, source d'erreur :", e)
+            print(">>> Erreur de la récupération des trades fermer, source d'erreur :", e)
             return False
         return closed
         
-    def GetAllTradeIds(self, tradeId):
+    def GetAllTradeIds(self):
         try:
             tradeId = self.con.get_All_trade_ids()
             print(">>> Liste des identifications des trades:", tradeId)
         except Exception as e:
-            print(">>> Erreur de la récupératoin des identifications des trades, source d'erreur :", e)
+            print(">>> Erreur de la récupération des identifications des trades, source d'erreur :", e)
             return False
         return tradeId
 
@@ -356,7 +357,7 @@ class fxcmapi:
             print(">>> Info compte :")
             print(account)
         except Exception as e:
-            print(">>> Erreur de la récupératoin des information sur le compte, source d'erreur :", e)
+            print(">>> Erreur de la récupération des information sur le compte, source d'erreur :", e)
             return False
         return account
 
@@ -383,7 +384,7 @@ class fxcmapi:
             pairs_list = self.con.get_instruments()
             print(">>> Liste des symboles récupérer avec succès !!!")
         except Exception as e:
-            print(">>> Erreur de la récupératoin des symboles, source d'erreur :", e)
+            print(">>> Erreur de la récupération des symboles, source d'erreur :", e)
             return False
         return pairs_list
     
