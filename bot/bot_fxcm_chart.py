@@ -15,42 +15,25 @@ from DataTraitement import DataTraitement
 
 """ config_file_name = "FXCM.cfg"
 server = 'demo' #type de serveur demo ou real """
-
-def SetTakeProfit(tp):
-    global tp_encours
-    try:
-        tp_encours = tp
-    except Exception as e:
-        print(">>> Erreur lors du changement du take profit, source d'erreur :", e)
-        return False
-    return True
-
-def SetStopLoss(sl):
-    global sl_encours
-    try:
-        sl_encours = sl
-    except Exception as e:
-        print(">>> Erreur lors du changement du stop loss, source d'erreur :", e)
-        return False
-    return True
+#  ‘m1’, ‘m5’, ‘m15’, ‘m30’, ‘H1’, ‘H2’, ‘H3’, ‘H4’, ‘H6’, ‘H8’, ‘D1’, ‘W1’, or ‘M1’.
 
 while(True):
-    #Connection()
-    #SetAccountId(accountid)
-    #GetAccountId()
+    connected = False
     file = ReadFileConfig()
     file.ReadConfig()
     fx = fxcmapi(file.GetServer(), file.GetConfigFileName())
-    connected = False
+    connected = fx.IsConnectd()        
+    if(file.GetTradeStatus() != True):
+        break
     try:        
         file.ReadConfig()
         if(file.GetTradeStatus() == True):
             break
-        print(">>> !!! Connexion !!!")
-        connected = fx.Connection(file.GetServer(), file.GetConfigFileName())
-        for td_id in fx.GetTradeIds():
-            print("arriver ici")
-            fx.SetStopLimite(td_id, file.GetTakeProfit(), file.GetStopLoss())
+        #connected = fx.Connection(file.GetServer(), file.GetConfigFileName())
+        if connected == True:
+            for td_id in fx.GetTradeIds():
+                print("arriver ici")
+                fx.SetStopLimite(td_id, file.GetTakeProfit(), file.GetStopLoss())
         while(connected == True and file.GetTradeStatus() == True):
             # forcena mampiditra sl sy tp eto fa misy fotoana tsy tafiditra ilay izy
             file.ReadConfig()
@@ -118,8 +101,6 @@ while(True):
                                 print(">>> Donnée non récupérer")
                             print(">>> Fin du traitement du symbole", pair)
                             print(">>> Début traitement opération trading")
-                            #SetTakeProfit(tp_test)
-                            #SetStopLoss(sl_test)
                             if(operation == 0):
                                 print(">>> Aucune trade éffectuée !!!")
                                 operation = 0
@@ -180,16 +161,17 @@ while(True):
         print(">>> Erreur de connexion, source d'erreur :", e)
         pass
     finally:
-        for td_id in fx.GetTradeIds():
-            fx.SetStopLimite(td_id, file.GetTakeProfit(), file.GetStopLoss())
         if(connected == True):
+            for td_id in fx.GetTradeIds():
+                fx.SetStopLimite(td_id, file.GetTakeProfit(), file.GetStopLoss())
             connected = fx.Deconnection()
         else:
             print(">>> Aucun compte connecter")
-        tm.sleep(60)
+        #tm.sleep(60)
         max_ask = 0.0
         max_bid = 0.0
         min_ask = 0.0
         min_bid = 0.0        
-        if(file.GetTradeStatus() == True):
+        del fx
+        if(file.GetTradeStatus() != True):
             break

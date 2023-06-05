@@ -3,10 +3,13 @@
 import fxcmpy
 class fxcmapi:
     def __init__(self, server, config_file_name):
-        self.con = self.Connection(server, config_file_name)
+        self.con = ""
+        self.isconnected = self.Connection(server, config_file_name)
         #self.pair = pair
-        pass
 
+    def IsConnectd(self):
+        return self.isconnected
+    
     def GetOpenPositionsSummary(self):
         try:
             self.summary = self.con.get_open_positions_summary().T
@@ -232,18 +235,21 @@ class fxcmapi:
         return True
         
     def Connection(self, server, config_file_name):
+        print(">>> Connection aux serveur")
         try:
             self.con = fxcmpy.fxcmpy(config_file=config_file_name, server = server)
             print(">>> Connection effectuée avec succès")
         except Exception as e:
+            print(">>> Echec de la connection")
             print(">>> Erreur de la connection, source d'erreur :", e)
             return False
         return True
 
     def Deconnection(self):
+        print(">>> Deconnection du serveur")
         try:
             self.con.close()
-            print(">>> Deconnection effectuée avec succès")
+            print(">>> Déconnection effectuée avec succès")
             return False
         except Exception as e:
             print(">>> Erreur de la déconnection, source d'erreur :", e)
