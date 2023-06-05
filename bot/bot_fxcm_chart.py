@@ -16,15 +16,16 @@ from DataTraitement import DataTraitement
 """ config_file_name = "FXCM.cfg"
 server = 'demo' #type de serveur demo ou real """
 #  ‘m1’, ‘m5’, ‘m15’, ‘m30’, ‘H1’, ‘H2’, ‘H3’, ‘H4’, ‘H6’, ‘H8’, ‘D1’, ‘W1’, or ‘M1’.
-
-while(True):
+file = ReadFileConfig()
+file.ReadConfig()
+while(file.GetTradeStatus() == True):
     connected = False
-    file = ReadFileConfig()
+    print("########## tonga eto ##########")    
     file.ReadConfig()
     fx = fxcmapi(file.GetServer(), file.GetConfigFileName())
-    connected = fx.IsConnectd()        
-    if(file.GetTradeStatus() != True):
-        break
+    connected = fx.IsConnectd()  
+    if(file.GetTradeStatus() == False):
+        break 
     try:        
         file.ReadConfig()
         if(file.GetTradeStatus() == True):
@@ -173,5 +174,8 @@ while(True):
         min_ask = 0.0
         min_bid = 0.0        
         del fx
-        if(file.GetTradeStatus() != True):
+        if(file.GetTradeStatus() == False):
             break
+        if(file.GetTradeStatus() == True):
+            continue
+        print(">>> Fin du traitement")

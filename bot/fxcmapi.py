@@ -242,6 +242,7 @@ class fxcmapi:
         except Exception as e:
             print(">>> Echec de la connection")
             print(">>> Erreur de la connection, source d'erreur :", e)
+            print(">>> Fin de la connexion")
             return False
         return True
 
