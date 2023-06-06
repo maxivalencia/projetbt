@@ -24,17 +24,11 @@ class DataPrediction:
         self.temps_coupure = datetime.now()
 
     def Preditcion(self, tendance_ascendant, tendance_descendant, tendance_ascendant_5m, tendance_descendant_5m):
-        # variable global
-        """ global capital_test
-        global sl_test
-        global tp_test """
         operation = 0
-        """ global risque_test
-        global roi_min_test
-        global lot_test
-        global valeur_pip_test
-        global operation_chartiste
-        global tendance_ascendant, tendance_descendant, tendance_ascendant_5m, tendance_descendant_5m """
+        rsi_sell_limite = 30
+        rsi_buy_limite = 70
+        cci_sell_limite = -100
+        cci_buy_limite = 100
         try:
             print(">>> Début de la prédiction")
             # traitement
@@ -155,7 +149,8 @@ class DataPrediction:
                 nb_signal_3 = 0
                 nb_signal_4 = 0
                 # if(df["RSI_Signal_buy"].iloc[-1] == 1):
-                if((df["RSI_BID"].iloc[-2] < 30 or df["RSI_BID"].iloc[-3] < 30 or df["RSI_BID"].iloc[-4] < 30) and df["RSI_BID"].iloc[-1] > 30):
+                #if((df["RSI_BID"].iloc[-2] < rsi_buy_limite or df["RSI_BID"].iloc[-3] < rsi_buy_limite or df["RSI_BID"].iloc[-4] < rsi_buy_limite) and df["RSI_BID"].iloc[-1] > rsi_buy_limite):
+                if(df["RSI_BID"].iloc[-1] < rsi_buy_limite):
                     nb_signal_1 = nb_signal_1 + 1
                 if(df["EMA_10_EMA_30_BID"].iloc[-1] == 1):
                     nb_signal_2 = nb_signal_2 + 1
@@ -164,7 +159,8 @@ class DataPrediction:
                 if(df["Close_EMA_10_BID"].iloc[-1] == 1):
                     nb_signal_2 = nb_signal_2 + 1
                 # if(df["CCI_Signal_buy"].iloc[-1] == 1):
-                if((df["CCI_BID"].iloc[-2] < -100 or df["CCI_BID"].iloc[-3] < -100 or df["CCI_BID"].iloc[-4] < -100) and df["CCI_BID"].iloc[-1] > -100):
+                #if((df["CCI_BID"].iloc[-2] < cci_sell_limite or df["CCI_BID"].iloc[-3] < cci_sell_limite or df["CCI_BID"].iloc[-4] < cci_sell_limite) and df["CCI_BID"].iloc[-1] > cci_sell_limite):
+                if(df["CCI_BID"].iloc[-1] < cci_sell_limite):
                     nb_signal_1 = nb_signal_1 + 1
                 if(df["BB_Signal_buy"].iloc[-1] == 1):
                     nb_signal_2 = nb_signal_2 + 1
@@ -191,7 +187,8 @@ class DataPrediction:
                 nb_signal_2 = 0
                 nb_signal_3 = 0
                 nb_signal_4 = 0
-                if((df["RSI_ASK"].iloc[-2] > 70 or df["RSI_ASK"].iloc[-3] > 70 or df["RSI_ASK"].iloc[-4] > 70) and df["RSI_ASK"].iloc[-1] < 70):
+                #if((df["RSI_ASK"].iloc[-2] > rsi_sell_limite or df["RSI_ASK"].iloc[-3] > rsi_sell_limite or df["RSI_ASK"].iloc[-4] > rsi_sell_limite) and df["RSI_ASK"].iloc[-1] < rsi_sell_limite):
+                if(df["RSI_ASK"].iloc[-1] > rsi_sell_limite):
                     nb_signal_1 = nb_signal_1 + 1
                 if(df["EMA_10_EMA_30_ASK"].iloc[-1] == -1):
                     nb_signal_2 = nb_signal_2 + 1
@@ -199,7 +196,8 @@ class DataPrediction:
                     nb_signal_1 = nb_signal_1 + 1
                 if(df["Close_EMA_10_ASK"].iloc[-1] == -1):
                     nb_signal_2 = nb_signal_2 + 1
-                if((df["CCI_ASK"].iloc[-2] > 100 or df["CCI_ASK"].iloc[-3] > 100 or df["CCI_ASK"].iloc[-4] > 100) and df["CCI_ASK"].iloc[-1] < 100):
+                #if((df["CCI_ASK"].iloc[-2] > cci_buy_limite or df["CCI_ASK"].iloc[-3] > cci_buy_limite or df["CCI_ASK"].iloc[-4] > cci_buy_limite) and df["CCI_ASK"].iloc[-1] < cci_buy_limite):
+                if(df["CCI_ASK"].iloc[-2] > cci_sell_limite):
                     nb_signal_1 = nb_signal_1 + 1
                 if(df["BB_Signal_sell"].iloc[-1] == 1):
                     nb_signal_2 = nb_signal_2 + 1
