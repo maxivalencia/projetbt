@@ -5,6 +5,16 @@ class DataCandle:
     def __init__(self, data):
         self.data = data
 
+    def Buy(self):
+        if(self.MarteauHaussier() == True or self.AvalementHaussier() == True or self.HaramiHaussier() == True or self.InsideBarHaussier() == True):
+            return True
+        return False
+
+    def Sell(self):
+        if(self.MarteauBaissier() == True or self.AvalementBaissier() == True or self.HaramiBaissier() == True or self.InsideBarBaissier() == True):
+            return True
+        return False
+
     def MarteauHaussier(self):
         if((((abs(self.data['askclose'][-2] - self.data['askopen'][-2])) * 3) <= (self.data['askhigh'][-2] - self.data['asklow'][-2])) and (((abs(self.data['askclose'][-2] - self.data['askopen'][-2])) >= ((self.data['askhigh'][-2] - self.data['askclose'][-2]) * 4)) or ((abs(self.data['askclose'][-2] - self.data['askopen'][-2])) >= ((self.data['askhigh'][-2] - self.data['askopen'][-2]) * 4)))):
             return True

@@ -8,6 +8,7 @@ from sklearn.linear_model import LinearRegression
 from datetime import timedelta
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from DataCandle import DataCandle
 
 ### ------ Fonction de prévision ------ ### 
 class DataPrediction:
@@ -29,6 +30,7 @@ class DataPrediction:
         rsi_buy_limite = 70
         cci_sell_limite = -100
         cci_buy_limite = 100
+        bougie = DataCandle(self.data)
         try:
             print(">>> Début de la prédiction")
             # traitement
@@ -167,7 +169,7 @@ class DataPrediction:
                 if((df["tickqty"].iloc[-1] >= df["tickqty"].iloc[-2]) and (df["tickqty"].iloc[-2] >= df["tickqty"].iloc[-3])):
                     nb_signal_4 = nb_signal_4 + 1
                 #if((nb_signal_1 >= 2 and nb_signal_2 >= 2) or (nb_signal_1 >= 1 and nb_signal_2 >= 2)):
-                if((nb_signal_1 >= 3 and nb_signal_2 >= 1 and tendance_ascendant_5m == True) or(nb_signal_1 >= 2 and nb_signal_2 >= 1 and tendance_ascendant == True)): # and nb_signal_3 >= 1 and nb_signal_4 >= 1):
+                if((nb_signal_1 >= 3 and nb_signal_2 >= 1 and tendance_ascendant_5m == True and bougie.Buy() == True) or(nb_signal_1 >= 2 and nb_signal_2 >= 1 and tendance_ascendant == True and bougie.Buy() == True)): # and nb_signal_3 >= 1 and nb_signal_4 >= 1):
                     #sl = -(valeur_actuel - sl_en_pips)
                     #tp = max_bid
                     tp = 10
@@ -204,7 +206,7 @@ class DataPrediction:
                 if((df["tickqty"].iloc[-1] >= df["tickqty"].iloc[-2]) and (df["tickqty"].iloc[-2] >= df["tickqty"].iloc[-3])):
                     nb_signal_4 = nb_signal_4 + 1
                 #if((nb_signal_1 >= 2 and nb_signal_2 >= 2) or (nb_signal_1 >= 1 and nb_signal_2 >= 2)):
-                if((nb_signal_1 >= 3 and nb_signal_2 >= 1 and tendance_descendant_5m == True) or(nb_signal_1 >= 2 and nb_signal_2 >= 1 and tendance_descendant == True)): # and nb_signal_3 >= 1 and nb_signal_4 >= 1):
+                if((nb_signal_1 >= 3 and nb_signal_2 >= 1 and tendance_descendant_5m == True and bougie.Sell() == True) or(nb_signal_1 >= 2 and nb_signal_2 >= 1 and tendance_descendant == True and bougie.Sell() == True)): # and nb_signal_3 >= 1 and nb_signal_4 >= 1):
                     #sl = -(valeur_actuel + sl_en_pips)
                     #tp = min_ask
                     tp = 10
