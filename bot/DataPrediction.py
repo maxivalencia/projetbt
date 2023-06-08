@@ -162,7 +162,7 @@ class DataPrediction:
                     nb_signal_2 = nb_signal_2 + 1
                 # if(df["CCI_Signal_buy"].iloc[-1] == 1):
                 #if((df["CCI_BID"].iloc[-2] < cci_sell_limite or df["CCI_BID"].iloc[-3] < cci_sell_limite or df["CCI_BID"].iloc[-4] < cci_sell_limite) and df["CCI_BID"].iloc[-1] > cci_sell_limite):
-                if(df["CCI_BID"].iloc[-1] < cci_sell_limite):
+                if(df["CCI_BID"].iloc[-1] < cci_buy_limite):
                     nb_signal_1 = nb_signal_1 + 1
                 if(df["BB_Signal_buy"].iloc[-1] == 1):
                     nb_signal_2 = nb_signal_2 + 1
